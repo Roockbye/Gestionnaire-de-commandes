@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  position:relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: #fff5f2;
+}
+
+
+.form8 {
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
+  width: 400px;
+  margin: 0 auto;
+  padding: 40px;
+  box-shadow: 0px 0px 39px -5px rgba(0, 0, 0, 0.34);
+  background: #fff;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  height: 200px;
+  transition: all .5s ease;
+  border-bottom: 4px solid fff5f2;
+}
+
+.form8.register__bg {
+  transition: all .5s ease;
+  background: #ffffff;
+  border-color: rgba(233, 63, 0, 0.3);
+}
+
+
+.form8.register__bg .form8__text span {
+  color: #e93f00;
+}
+
+.form8.register__bg .form8__btncircle span {
+  background: #fff;
+}
+
+.form8.register__bg .form8__btn {
+  background: #e93f00;
+  color: #ffffff;
+}
+
+.form8 input {
+  display: block;
+  width: 100%;
+  background: transparent;
+  border: 0;
+  height: 50px;
+  line-height: 50px;
+  outline: none;
+  border-bottom: 1px solid #807b7b;
+  color: #e93f00;
+  transition: all .2s ease;
+}
+
+.form8 input::placeholder {
+  transition: all .2s ease;
+  opacity: 1;
+  color: #807b7b;
+}
+
+.form8 input:focus::placeholder {
+  transition: all .2s ease;
+  opacity: 0;
+}
+
+.form8__log,
+.form8__reg {
+  transition: all .5s ease;
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.form8__log.slided,
+.form8__reg.slided {
+  opacity: 0;
+  transition: all .5s ease;
+  transform: translateY(-285px);
+}
+
+.form8__reg {
+  top: 50px;
+  transition: all .5s ease;
+  transform: translateY(0px);
+  opacity: 0;
+}
+
+.form8__reg.slided {
+  opacity: 1;
+  top: 0;
+  transition: all .5s ease;
+  transform: translateY(-200px);
+}
+
+.form8__text {
+  text-align: center;
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.form8__text span {
+  color: #e93f00;
+}
+
+.form8__btn {
+  background: #e93f00;
+  border: 0;
+  width: 70%;
+  margin: 40px auto 0;
+  display: block;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 17px;
+  padding: 10px;
+  border-radius: 40px;
+  cursor: pointer;
+  outline: none;
+  transition: all .2s ease;
+}
+
+.form8__btn:hover {
+  background: rgba(233, 63, 0, 0.5);
+}
+
+.form8__btn::before {
+  content: '\f0a9';
+  font-family: FontAwesome;
+  font-size: 20px;
+  display: inline-block;
+  position: absolute;
+  right: 25px;
+  transition: all .3s ease-in-out;
+}
+ /*bouton menu inscription*/
+.form8__btncircle {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 0;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  transition: all 1.2s ease;
+  outline: none;
+  z-index: 2;
+}
+
+.form8__btncircle:hover span {
+  width: 80%;
+  height: 4px;
+  border-radius: 15px;
+}
+
+.form8__btncircle span {
+  width: 5px;
+  height: 5px;
+  background: #e93f00;
+  display: block;
+  border-radius: 90%;
+  margin: 5px auto 0;
+  transition: all .2s ease;
+}
+
+.form8__btncircle span:nth-child(1) {
+  margin-top: 0;
+}
+
+.form8__btncircle.active {
+  border-radius: 90%;
+  background: #fff;
+}
+
+.form8__btncircle.active:hover span {
+  width: 5px;
+  height: 5px;
+  border-radius: 90%;
+}
+
+.form8__btncircle.active span {
+  background: #e93f00 !important;
+  margin: 0 auto;
+}
+
+.form8__btncircle.active span:nth-child(1),
+.form8__btncircle.active span:nth-child(3) {
+  opacity: 0;
+}
+
