@@ -43,10 +43,28 @@
         <div class="box">
             <h3>Profil</h3>
             <p>
-                Consultez et mettez à jour vos informations personnelles ici.
-<!--                toutes les info de l'user (possibilité to update)
-                    option de déconnexion-->
+                Consultez et mettez à jour vos informations personnelles ici.</br>
             </p>
+            <!--toutes les info de l'user (possibilité to update)-->
+            <div style="margin-top: 50px">
+                    <div class="info">
+                <label>Nom</label></br>
+                <input type="text" name="nom" value=""></br>
+                    </div>
+                    <div class="info">
+                    <label>Prénom</label></br>
+                <input type="text" name="nom" value=""></br>
+                    </div>
+                    <div class="info">
+                <label>Email</label></br>
+                <input type="email" name="nom" value=""></br>
+                    </div>
+                    <div class="info">
+                <label>Numéro de tel</label></br>
+                <input type="tel" name="nom" value=""></br>
+                    </div>
+            </div>
+                <!--option de déconnexion-->
         </div>
 
         <div class="box">
@@ -54,6 +72,16 @@
             <p>
                 Changez votre mot de passe pour assurer la sécurité de votre compte.
 <!--                possibilité de changé de mot de passe-->
+            <div style="margin-top: 50px">
+            <div class="info">
+                <label>Nouveau mot de passe</label>
+                <input type="password" name="nom" value=""></br>
+            </div>
+            <div class="info">
+                <label>Confirmation du mot de passe</label>
+                <input type="password" name="nom" value=""></br>
+            </div>
+            </div>
             </p>
         </div>
     </div>
