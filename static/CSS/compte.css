@@ -1,0 +1,13 @@
+#account-section {
+    background: var(--clr-tertiary);
+    margin-top: 60px;}
+
+#account-details {
+    text-align: center;
+}
+
+.box:hover {
+    color: var(--clr-secondary);
+    background: white;
+    border: 1px solid var(--clr-primary);
+}

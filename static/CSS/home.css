@@ -252,8 +252,11 @@ nav ul li a {
 }
 
 .footer h2 {
-    font-size: 22px;
+    font-size: 35px;
     margin-bottom: 10px;
+}
+.footer p {
+    font-size: 25px;
 }
 
 .footer ul {

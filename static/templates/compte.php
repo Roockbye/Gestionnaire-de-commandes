@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Accueil</title>
+    <title>Compte</title>
     <!-- CSS -->
     <link rel="stylesheet" href="../CSS/home.css" />
+    <link rel="stylesheet" href="../CSS/compte.css" />
 </head>
 <body>
 
@@ -15,68 +16,49 @@
     <nav>
         <label class="logo">Restôt</label>
         <ul>
-            <li><a href="home.php" class="active">Accueil</a></li>
+            <li><a href="home.php">Accueil</a></li>
             <li><a href="reservations.php">Mes réservations</a></li>
-            <li><a href="compte.php">Compte</a></li>
+            <li><a href="compte.php" class="active">Compte</a></li>
         </ul>
     </nav>
 </header>
 <!-- End header -->
 
-<!-- Hero Section -->
-<div class="section flex" id="hero-section">
+<!-- Account Section -->
+<div class="section flex" id="account-section">
     <div class="text">
         <h1 class="primary">
-            It's Not Just Food, <br />
-            It's an <span style="color: var(--clr-primary)">Experience...</span>
+            Manage your account, <br />
+            Stay connected with <span style="color: var(--clr-primary)">Restôt</span>
         </h1>
     </div>
 </div>
-<!-- End Hero Section -->
+<!-- End Account Section -->
 
-<!-- How It Works -->
-<div class="section" id="how-it-works">
-    <h2 class="secondary">Nos Restaurants</h2>
+<!-- Account Details -->
+<div class="section" id="account-details">
+    <h2 class="secondary">Vos Informations</h2>
 
     <div class="container flex">
         <div class="box">
-            <h3>La Tavola Felice</h3>
-            <img src="../image/italien.jpg" class="resto">
+            <h3>Profil</h3>
             <p>
-                Vous êtes tenté par notre restaurant <strong>italien</strong>?
-                Cliquer ici pour commander !
+                Consultez et mettez à jour vos informations personnelles ici.
+<!--                toutes les info de l'user (possibilité to update)
+                    option de déconnexion-->
             </p>
         </div>
 
         <div class="box">
-            <h3>Mariachi Grill</h3>
-            <img src="../image/mexicain.jpg" class="resto">
+            <h3>Mot de passe</h3>
             <p>
-                Vous êtes tenté par notre restaurant <strong>mexicain</strong>?
-                Cliquer ici pour commander !
-            </p>
-        </div>
-
-        <div class="box">
-            <h3>La Folie des Papilles</h3>
-            <img src="../image/français.jpg" class="resto">
-            <p>
-                Vous êtes tenté par notre restaurant <strong>français</strong>?
-                Cliquer ici pour commander !
-            </p>
-        </div>
-
-        <div class="box">
-            <h3>Le Rêve du Panda</h3>
-            <img src="../image/chinois.jpg" class="resto">
-            <p>
-                Vous êtes tenté par notre restaurant <strong>chinois</strong>?
-                Cliquer ici pour commander !
+                Changez votre mot de passe pour assurer la sécurité de votre compte.
+<!--                possibilité de changé de mot de passe-->
             </p>
         </div>
     </div>
 </div>
-<!-- End How It Works -->
+<!-- End Account Details -->
 
 <!-- Footer -->
 <div class="footer">
