@@ -1,0 +1,8 @@
+#account-section {
+    background: var(--clr-tertiary);
+    margin-top: 60px;
+}
+
+#account-details {
+    text-align: center;
+}

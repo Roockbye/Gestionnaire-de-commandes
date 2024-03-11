@@ -7,6 +7,7 @@
     <title>Mes réservations</title>
     <!-- CSS -->
     <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/reservation.css" />
 </head>
 <body>
 
@@ -24,6 +25,35 @@
 </header>
 <!-- End header -->
 
+<!-- Account Section -->
+<div class="section flex" id="account-section">
+    <div class="text">
+        <h1 class="primary">
+            Explore your reservations, <br />
+            Elevate your dining <span style="color: var(--clr-primary)">experience</span>
+        </h1>
+    </div>
+</div>
+<!-- End Account Section -->
+
+<!-- Account Details -->
+<div class="section" id="account-details">
+    <h2 class="secondary">Mes réservations</h2>
+
+    <div class="container flex">
+
+<!--        boucle où on a toutes les commandes du client-->
+        <div class="box">
+            <h3>Ma commande de tel date</h3>
+            <p>
+                blablabla
+            </p>
+        </div>
+    </div>
+</div>
+<!-- End Account Details -->
+
+
 <!-- Footer -->
 <div class="footer">
     <div class="container flex">
@@ -38,7 +68,7 @@
         </div>
 
         <div class="footer-category">
-            <h2>Our Menu</h2>
+            <h2>What you can discover</h2>
 
             <ul>
                 <li>Biryani</li>
