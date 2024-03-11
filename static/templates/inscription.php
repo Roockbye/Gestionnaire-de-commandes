@@ -1,3 +1,7 @@
+<?php
+  include "../../server/inscription.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,10 +24,10 @@
         <span class="form8__text">
           <span>Se connecter</span>
         </span>
-        <form action="#">
+        <form method="post">
           <input type="text" name="mail_connexion" autocomplete="off" class="form8__inpt" placeholder="Mail">
           <input type="password" name="mdp_connexion" autocomplete="off" class="form8__inpt" placeholder="Mot de passe">
-          <button class="form8__btn">Connexion</button>
+          <button class="form8__btn" type="submit" name='submit'>Connexion</button>
         </form>
       </div>
 
@@ -31,11 +35,11 @@
         <span class="form8__text">
           <span>S'inscrire</span>
         </span>
-        <form action="#">
+        <form method="post">
           <input type="text" name="mail_inscription" autocomplete="off" class="form8__inpt" placeholder="Mail">
           <input type="password" name="mdp_inscription" autocomplete="off" class="form8__inpt" placeholder="Mot de passe">
           <input type="password" name="mdp_confirm" autocomplete="off" class="form8__inpt" placeholder="Confirmation mot de passe">
-          <button class="form8__btn">Inscription</button>
+          <button class="form8__btn" type="submit" name='submit'>Inscription</button>
         </form>
       </div>
     </div>

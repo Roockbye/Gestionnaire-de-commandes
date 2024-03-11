@@ -1,5 +1,8 @@
 <?php
 session_start();
+if (!isset($_SESSION['mail'])) {
+    header('Location: inscription.php');
+}
 
 $bdd = new PDO('mysql:host=localhost;dbname=restôt;charset=utf8;','root',"");
 
@@ -17,3 +20,4 @@ while ($row = $client->fetch(PDO::FETCH_ASSOC)) {
     $email = $row['mail'];
     $tel = $row['numero'];
 }
+?>

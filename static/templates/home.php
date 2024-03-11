@@ -1,3 +1,7 @@
+<?php
+    include "../../server/home.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
