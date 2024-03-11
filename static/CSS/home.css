@@ -41,19 +41,19 @@ body {
 }
 
 .primary {
-    font-size: 64px;
+    font-size: 34px;
     font-weight: 700;
     margin-bottom: 20px;
 }
 
 .secondary {
-    font-size: 60px;
+    font-size: 30px;
     font-weight: 700;
     margin-bottom: 20px;
 }
 
 .tertiary {
-    font-size: 24px;
+    font-size: 12px;
     font-weight: 400;
     margin-bottom: 20px;
 }
@@ -73,7 +73,7 @@ body {
 
 /* Menu */
 nav {
-    height: 80px;
+    height: 60px;
     width: 100%;
     position: fixed;
     top: 0;
@@ -83,8 +83,8 @@ nav {
 }
 
 label.logo {
-    font-size: 50px;
-    line-height: 80px;
+    font-size: 25px;
+    line-height: 60px;
     padding:  0 30px;
     font-weight: 700;
 }
@@ -96,12 +96,12 @@ nav ul {
 
 nav ul li {
     display: inline-block;
-    line-height: 80px;
+    line-height: 60px;
     margin: 0 5px;
 }
 
 nav ul li a {
-    font-size: 25px;
+    font-size: 20px;
     padding: 7px 13px;
     text-decoration: none;
     color: var(--clr-secondary);
@@ -163,10 +163,11 @@ nav ul li img:hover {
 
 .box {
     border: 1px solid var(--clr-primary);
-    padding: 25px 5px;
+    padding: 10px 5px;
     margin: 0 10px;
+    margin-bottom: 50vh;
     border-radius: 8px;
-    font-size: 35px;
+    font-size: 17px;
     transition: 0.3s ease;
     cursor: pointer;
 }
@@ -210,17 +211,6 @@ nav ul li img:hover {
     grid-template-columns: repeat(3, 1fr);
 }
 
-.menu-item {
-    width: 260px;
-    margin: 0 auto;
-    border-radius: 6px;
-    overflow: hidden;
-}
-
-.menu-item img {
-    width: 100%;
-}
-
 .order {
     justify-content: space-between;
 }
@@ -262,17 +252,17 @@ nav ul li img:hover {
 }
 
 .footer h2 {
-    font-size: 35px;
+    font-size: 15px;
     margin-bottom: 10px;
 }
 .footer p {
-    font-size: 25px;
+    font-size: 10px;
 }
 
 .footer ul {
     list-style: none;
-    line-height: 30px;
-    font-size: 16px;
+    line-height: 10px;
+    font-size: 10px;
 }
 
 .footer ul li {
@@ -285,8 +275,8 @@ nav ul li img:hover {
 
 .copyright {
     text-align: center;
-    padding: 20px 0;
-    margin-top: 30px;
+    padding-top: 7px;
+    margin-top: 15px;
     border-top: 1px solid #b2b2b2;
 }
 /* End Footer */

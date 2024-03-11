@@ -47,7 +47,7 @@
                 Consultez et mettez à jour vos informations personnelles ici.</br>
             </p>
             <!--toutes les info de l'user (possibilité to update)-->
-            <div style="margin-top: 50px">
+            <div style="margin-top: 25px">
                     <div class="info">
                 <label>Nom</label></br>
                 <input type="text" name="nom" value=""></br>
@@ -75,7 +75,7 @@
                 Changez votre mot de passe pour assurer la sécurité de votre compte.
             </p>
             <!--possibilité de changé de mot de passe-->
-            <div style="margin-top: 50px">
+            <div style="margin-top: 25px">
             <div class="info">
                 <label>Nouveau mot de passe</label>
                 <input type="password" name="password"></br>
