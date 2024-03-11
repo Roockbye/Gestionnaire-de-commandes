@@ -1,6 +1,7 @@
 #account-section {
     background: var(--clr-tertiary);
-    margin-top: 60px;}
+    margin-top: 60px;
+}
 
 #account-details {
     text-align: center;
@@ -17,10 +18,10 @@ input {
     border-radius: 8px;
     background-color: #e1e1e1;
     width: 100%;
-    height: 60px;
+    height: 30px;
     border: none;
     margin-top: 10px;
-    font-size: 40px;
+    font-size: 20px;
 }
 
 input[type=submit] {
@@ -38,6 +39,6 @@ input[type=submit]:hover{
 .info{
     text-align: left;
     margin-top: 15px;
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
 }

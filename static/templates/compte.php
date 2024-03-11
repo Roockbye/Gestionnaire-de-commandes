@@ -1,5 +1,5 @@
 <?php
-    include "../../server/compte.php";
+    include '../../server/compte.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,8 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Compte</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="../CSS/home.css" />
-    <link rel="stylesheet" href="../CSS/compte.css" />
+    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/compte.css" />
 </head>
 <body>
 
@@ -50,22 +50,22 @@
                 Consultez et mettez à jour vos informations personnelles ici.</br>
             </p>
             <!--toutes les info de l'user (possibilité to update)-->
-            <div style="margin-top: 50px">
+            <div style="margin-top: 25px">
                     <div class="info">
                 <label>Nom</label></br>
-                <input type="text" name="nom" value=""></br>
+                <input type="text" name="nom" value="<?php echo isset($lastName) ? $lastName : '';?>"></br>
                     </div>
                     <div class="info">
                     <label>Prénom</label></br>
-                <input type="text" name="prenom" value=""></br>
+                <input type="text" name="prenom" value="<?php echo isset($firstName) ? $firstName : '';?>"></br>
                     </div>
                     <div class="info">
                 <label>Email</label></br>
-                <input type="email" name="email" value=""></br>
+                <input type="email" name="email" value="<?php echo isset($email) ? $email : '';?>"></br>
                     </div>
                     <div class="info">
                 <label>Numéro de tel</label></br>
-                <input type="tel" name="tel" value=""></br>
+                <input type="tel" name="tel" value="<?php echo isset($tel) ? $tel : '';?>"></br>
                     </div>
             </div>
             <input type="submit" name="updateClient" value="Enregistrer">
@@ -78,7 +78,7 @@
                 Changez votre mot de passe pour assurer la sécurité de votre compte.
             </p>
             <!--possibilité de changé de mot de passe-->
-            <div style="margin-top: 50px">
+            <div style="margin-top: 25px">
             <div class="info">
                 <label>Nouveau mot de passe</label>
                 <input type="password" name="password"></br>
