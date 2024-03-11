@@ -22,7 +22,7 @@
             <li><a href="home.php">Accueil</a></li>
             <li><a href="reservations.php">Mes réservations</a></li>
             <li><a href="compte.php" class="active">Compte</a></li>
-            <li><img src="../image/se-deconnecter.png" class="deconnexion"></li>
+            <a href="../../server/deconnexion.php"><li><img src="../image/se-deconnecter.png" class="deconnexion"></li></a>
         </ul>
     </nav>
 </header>
