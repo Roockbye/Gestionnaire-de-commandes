@@ -23,6 +23,18 @@ input {
     font-size: 40px;
 }
 
+input[type=submit] {
+    width: 50%;
+    margin-top: 20px;
+    background-color: var(--clr-primary);
+    color: white;
+}
+
+input[type=submit]:hover{
+    cursor: pointer;
+    border: 3px solid #e1e1e1;
+}
+
 .info{
     text-align: left;
     margin-top: 15px;

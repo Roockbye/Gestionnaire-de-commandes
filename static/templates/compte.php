@@ -19,6 +19,7 @@
             <li><a href="home.php">Accueil</a></li>
             <li><a href="reservations.php">Mes réservations</a></li>
             <li><a href="compte.php" class="active">Compte</a></li>
+            <li><img src="../image/se-deconnecter.png" class="deconnexion"></li>
         </ul>
     </nav>
 </header>
@@ -40,7 +41,7 @@
     <h2 class="secondary">Vos Informations</h2>
 
     <div class="container flex">
-        <div class="box">
+        <form action="compte.php" method="post" class="box">
             <h3>Profil</h3>
             <p>
                 Consultez et mettez à jour vos informations personnelles ici.</br>
@@ -53,37 +54,39 @@
                     </div>
                     <div class="info">
                     <label>Prénom</label></br>
-                <input type="text" name="nom" value=""></br>
+                <input type="text" name="prenom" value=""></br>
                     </div>
                     <div class="info">
                 <label>Email</label></br>
-                <input type="email" name="nom" value=""></br>
+                <input type="email" name="email" value=""></br>
                     </div>
                     <div class="info">
                 <label>Numéro de tel</label></br>
-                <input type="tel" name="nom" value=""></br>
+                <input type="tel" name="tel" value=""></br>
                     </div>
             </div>
+            <input type="submit" name="updateClient" value="Enregistrer">
                 <!--option de déconnexion-->
-        </div>
+        </form>
 
-        <div class="box">
+        <form action="" method="post" class="box">
             <h3>Mot de passe</h3>
             <p>
                 Changez votre mot de passe pour assurer la sécurité de votre compte.
-<!--                possibilité de changé de mot de passe-->
+            </p>
+            <!--possibilité de changé de mot de passe-->
             <div style="margin-top: 50px">
             <div class="info">
                 <label>Nouveau mot de passe</label>
-                <input type="password" name="nom" value=""></br>
+                <input type="password" name="password"></br>
             </div>
             <div class="info">
                 <label>Confirmation du mot de passe</label>
-                <input type="password" name="nom" value=""></br>
+                <input type="password" name="checkPassword"></br>
             </div>
             </div>
-            </p>
-        </div>
+            <input type="submit" name="updatePassword" value="Enregistrer">
+        </form>
     </div>
 </div>
 <!-- End Account Details -->

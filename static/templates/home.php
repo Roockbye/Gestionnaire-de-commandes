@@ -18,6 +18,7 @@
             <li><a href="home.php" class="active">Accueil</a></li>
             <li><a href="reservations.php">Mes réservations</a></li>
             <li><a href="compte.php">Compte</a></li>
+            <li><img src="../image/se-deconnecter.png" class="deconnexion"></li>
         </ul>
     </nav>
 </header>
