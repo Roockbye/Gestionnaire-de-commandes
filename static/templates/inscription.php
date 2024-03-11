@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page d'inscription/connexion</title>
+  <title>Page de login</title>
   <link rel="stylesheet" href="../css/inscription.css">
 </head>
 <body>
@@ -21,8 +21,8 @@
           <span>Se connecter</span>
         </span>
         <form action="#">
-          <input type="text" name="mail" value="" autocomplete="off" class="form8__inpt" placeholder="Mail">
-          <input type="password" name="mdp" value="" autocomplete="off" class="form8__inpt" placeholder="Mot de passe">
+          <input type="text" name="mail_connexion" autocomplete="off" class="form8__inpt" placeholder="Mail">
+          <input type="password" name="mdp_connexion" autocomplete="off" class="form8__inpt" placeholder="Mot de passe">
           <button class="form8__btn">Connexion</button>
         </form>
       </div>
@@ -32,10 +32,10 @@
           <span>S'inscrire</span>
         </span>
         <form action="#">
-          <input type="text" name="mail" value="" autocomplete="off" class="form8__inpt" placeholder="Mail">
-          <input type="password" name="mdp" value="" autocomplete="off" class="form8__inpt" placeholder="Mot de passe">
-          <input type="password" name="mdp-conf" value="" autocomplete="off" class="form8__inpt" placeholder="Confirmation mot de passe">
-          <button class="form8__btn">Confirmer</button>
+          <input type="text" name="mail_inscription" autocomplete="off" class="form8__inpt" placeholder="Mail">
+          <input type="password" name="mdp_inscription" autocomplete="off" class="form8__inpt" placeholder="Mot de passe">
+          <input type="password" name="mdp_confirm" autocomplete="off" class="form8__inpt" placeholder="Confirmation mot de passe">
+          <button class="form8__btn">Inscription</button>
         </form>
       </div>
     </div>
