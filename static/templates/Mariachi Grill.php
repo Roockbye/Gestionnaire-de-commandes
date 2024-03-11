@@ -1,5 +1,5 @@
 <?php
-    include "../../server/home.php";
+    include "../../server/reservation.php";
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accueil</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/resto.css" />
 </head>
 <body>
 
@@ -32,8 +32,8 @@
 <div class="section flex" id="hero-section">
     <div class="text">
         <h1 class="primary">
-            It's Not Just Food, <br />
-            It's an <span style="color: var(--clr-primary)">Experience...</span>
+            Réservez votre table, <br />
+            à la <span style="color: var(--clr-primary)">Mariachi Grill</span>
         </h1>
     </div>
 </div>
@@ -41,52 +41,49 @@
 
 <!-- How It Works -->
 <div class="section" id="how-it-works">
-    <h2 class="secondary">Nos Restaurants</h2>
+    <h2 class="secondary">Réservez ici</h2>
 
     <div class="container flex">
-        <div class="box">
-            <a href="La Tavola Felice.php">
-            <h3>La Tavola Felice</h3>
-            <img src="../image/italien.jpg" class="resto">
-            <p>
-                Vous êtes tenté par notre restaurant <strong>italien</strong>?
-                Cliquer ici pour commander !
-            </p>
-            </a>
-        </div>
-
-        <div class="box">
-            <a href="Mariachi Grill.php">
-            <h3>Mariachi Grill</h3>
-            <img src="../image/mexicain.jpg" class="resto">
-            <p>
-                Vous êtes tenté par notre restaurant <strong>mexicain</strong>?
-                Cliquer ici pour commander !
-            </p>
-            </a>
-        </div>
-
-        <div class="box">
-            <a href="La Folie des Papilles.php">
-            <h3>La Folie des Papilles</h3>
-            <img src="../image/français.jpg" class="resto">
-            <p>
-                Vous êtes tenté par notre restaurant <strong>français</strong>?
-                Cliquer ici pour commander !
-            </p>
-        </a>
-        </div>
-
-        <div class="box">
-            <a href="Le Rêve du Panda.php">
-            <h3>Le Rêve du Panda</h3>
-            <img src="../image/chinois.jpg" class="resto">
-            <p>
-                Vous êtes tenté par notre restaurant <strong>chinois</strong>?
-                Cliquer ici pour commander !
-            </p>
-        </a>
-        </div>
+            <div class="col-md-4 col-md-pull-7">
+						<div class="booking-form">
+							<form>
+								<div class="form-group">
+									<span class="form-label" name="nom">Nom</span>
+									<input class="form-control" type="text" placeholder="Nom">
+								</div>
+                                <div class="form-group">
+									<span class="form-label" name="nom">Prénom</span>
+									<input class="form-control" type="text" placeholder="Prénom">
+								</div>
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="form-group">
+											<span class="form-label">Date de réservation</span>
+											<input class="form-control" type="date" required>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="form-group">
+											<span class="form-label">Heure de réservation</span>
+											<input class="form-control" type="time" required>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-4">
+										<div class="form-group">
+											<span class="form-label">Nombre de personnes</span>
+											<input class="" type="number" min="1" max="20">
+											<span class="select-arrow"></span>
+										</div>
+									</div>
+                                </div>
+								<div class="form-btn">
+									<button class="submit-btn">Réserver</button>
+								</div>
+							</form>
+						</div>
+					</div>
     </div>
 </div>
 <!-- End How It Works -->
@@ -105,7 +102,7 @@
         </div>
 
         <div class="footer-category">
-            <h2>What you can discover</h2>
+            <h2>Our Menu</h2>
 
             <ul>
                 <li>Biryani</li>
