@@ -1,0 +1,43 @@
+#account-section {
+    background: var(--clr-tertiary);
+    margin-top: 60px;}
+
+#account-details {
+    text-align: center;
+}
+
+.box:hover {
+    color: var(--clr-secondary);
+    background: white;
+    border: 1px solid var(--clr-primary);
+    cursor: default;
+}
+
+input {
+    border-radius: 8px;
+    background-color: #e1e1e1;
+    width: 100%;
+    height: 60px;
+    border: none;
+    margin-top: 10px;
+    font-size: 40px;
+}
+
+input[type=submit] {
+    width: 50%;
+    margin-top: 20px;
+    background-color: var(--clr-primary);
+    color: white;
+}
+
+input[type=submit]:hover{
+    cursor: pointer;
+    border: 3px solid #e1e1e1;
+}
+
+.info{
+    text-align: left;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
