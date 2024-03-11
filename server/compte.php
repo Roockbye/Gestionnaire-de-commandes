@@ -14,6 +14,7 @@ $firstName = '';
 $email = '';
 $tel = '';
 $idClient = '';
+$isUpdate = '';
 
 while ($row = $client->fetch(PDO::FETCH_ASSOC)) {
     $lastName = $row['nom'];
@@ -29,8 +30,20 @@ if (isset($_POST['updateClient'])) {
     $email = $_POST['email'];
     $tel = $_POST['tel'];
 
+
     $update = $bdd->prepare("UPDATE clients SET nom=?, prenom=?, mail=?, numero=? WHERE id=?");
     $update->execute([$lastName, $firstName, $email, $tel, $idClient]);
+}
+
+if (isset($_POST['updatePassword'])) {
+    $password = $_POST['password'];
+    $checkPassword = $_POST['checkPassword'];
+
+    if ($password == $checkPassword) {
+        $updatePassword = $bdd->prepare("UPDATE clients SET mdp=? WHERE id=?");
+        $updatePassword->execute([$password, $idClient]);
+        $isUpdate = 'Votre mot de passe a bien été modifié !';
+    }
 }
 
 ?>

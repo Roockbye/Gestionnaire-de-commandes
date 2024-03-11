@@ -53,19 +53,24 @@
             <div style="margin-top: 25px">
                     <div class="info">
                 <label>Nom</label></br>
-                <input type="text" name="nom" value="<?php echo isset($lastName) ? $lastName : '';?>"></br>
+                <input type="text" name="nom" value="<?php echo !empty($lastName)? $lastName : '';?>"></br>
+                        <?php
+                        if (isset($_POST['updateClient']) && empty($lastName)) {
+                            echo "<h10>Champ vide</h10>";
+                        }
+                        ?>
                     </div>
                     <div class="info">
                     <label>Prénom</label></br>
-                <input type="text" name="prenom" value="<?php echo isset($firstName) ? $firstName : '';?>"></br>
+                <input type="text" name="prenom" value="<?php echo !empty($firstName) ? $firstName : '';?>"></br>
                     </div>
                     <div class="info">
                 <label>Email</label></br>
-                <input type="email" name="email" value="<?php echo isset($email) ? $email : '';?>"></br>
+                <input type="email" name="email" value="<?php echo !empty($email) ? $email : '';?>"></br>
                     </div>
                     <div class="info">
                 <label>Numéro de tel</label></br>
-                <input type="tel" name="tel" value="<?php echo isset($tel) ? $tel : '';?>"></br>
+                <input type="tel" name="tel" value="<?php echo !empty($tel) ? $tel : '';?>"></br>
                     </div>
             </div>
             <input type="submit" name="updateClient" value="Enregistrer">
@@ -87,6 +92,7 @@
                 <label>Confirmation du mot de passe</label>
                 <input type="password" name="checkPassword"></br>
             </div>
+                <p style="margin-top: 10px"><?php echo isset($isUpdate) ? $isUpdate : '';?></p>
             </div>
             <input type="submit" name="updatePassword" value="Enregistrer">
         </form>
