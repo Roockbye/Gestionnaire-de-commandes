@@ -1,3 +1,6 @@
+<?php
+    include '../../server/compte.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,19 +53,19 @@
             <div style="margin-top: 25px">
                     <div class="info">
                 <label>Nom</label></br>
-                <input type="text" name="nom" value=""></br>
+                <input type="text" name="nom" value="<?php echo isset($lastName) ? $lastName : '';?>"></br>
                     </div>
                     <div class="info">
                     <label>Prénom</label></br>
-                <input type="text" name="prenom" value=""></br>
+                <input type="text" name="prenom" value="<?php echo isset($firstName) ? $firstName : '';?>"></br>
                     </div>
                     <div class="info">
                 <label>Email</label></br>
-                <input type="email" name="email" value=""></br>
+                <input type="email" name="email" value="<?php echo isset($email) ? $email : '';?>"></br>
                     </div>
                     <div class="info">
                 <label>Numéro de tel</label></br>
-                <input type="tel" name="tel" value=""></br>
+                <input type="tel" name="tel" value="<?php echo isset($tel) ? $tel : '';?>"></br>
                     </div>
             </div>
             <input type="submit" name="updateClient" value="Enregistrer">
