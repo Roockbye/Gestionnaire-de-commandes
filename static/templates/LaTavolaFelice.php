@@ -78,10 +78,11 @@
 										</div>
 									</div>
                                 </div>
-								<div class="form-btn">
+                                <div class="form-btn">
 									<input class="submit-btn" name="reservationTavolaFelice" type="submit" value="Réserver">
 								</div>
-							</form>
+                                <p style="margin-top: 10px"><?php echo isset($isReserver) ? $isReserver : '';?></p>
+                            </form>
 						</div>
             </div>
     </div>

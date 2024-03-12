@@ -46,7 +46,7 @@
     <div class="container flex">
             <div class="col-md-4 col-md-pull-7">
 						<div class="booking-form">
-							<form>
+							<form action="" method="post">
                                 <div class="form-group">
                                     <span class="form-label" >Nom</span>
                                     <input class="form-control" type="text" name="nom" value="<?php echo !empty($lastName)? $lastName : '';?>">
@@ -79,9 +79,10 @@
                                     </div>
                                 </div>
 								<div class="form-btn">
-									<button class="submit-btn">Réserver</button>
+									<input class="submit-btn" type="submit" name="reservationRevePanda" value="Réserver">
 								</div>
-							</form>
+                                <p style="margin-top: 10px"><?php echo isset($isReserver) ? $isReserver : '';?></p>
+                            </form>
 						</div>
 					</div>
     </div>
