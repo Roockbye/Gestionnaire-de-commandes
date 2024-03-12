@@ -38,17 +38,104 @@
 
 <!-- Account Details -->
 <div class="section" id="account-details">
-    <h2 class="secondary">Mes réservations</h2>
+    <h2 class="secondary"><u>Mes réservations</u></h2>
 
-    <div class="container flex">
+    <div class="container">
+        <h2 class="secondary">La Tavola Felice</h2>
+        <!--        boucle où on a toutes les commandes du client-->
+        <?php
+        $bdd = new PDO('mysql:host=localhost;dbname=restôt;charset=utf8;','root',"");
+        session_start();
+        $client = $bdd->prepare("SELECT id FROM clients WHERE mail=? AND mdp=?");
+        $client->execute([$_SESSION['mail'], $_SESSION['mdp']]);
+        $idClient = $client->fetchColumn();
 
-<!--        boucle où on a toutes les commandes du client-->
-        <div class="box">
-            <h3>Ma commande de tel date</h3>
-            <p>
-                blablabla
-            </p>
-        </div>
+        $reservations = $bdd->prepare("SELECT * FROM réservations WHERE id_restaurant=? and id_client=?");
+        $reservations->execute([1, $idClient]);
+
+        if ($reservations->rowCount() > 0) {
+            while ($row = $reservations->fetch(PDO::FETCH_ASSOC)) {
+                echo '<div class="box">';
+                $dateObj = new DateTime($row['jour']);
+                $date = $dateObj->format("l j F Y");
+                echo "<h3>Ma réservation du ".$date."</h3>";
+                $heureObj = new DateTime($row['heure']);
+                $hour = $heureObj->format('H:i');
+                echo "<p>Pour ".$row['nbr_personnes']." personnes à ".$hour."h</p></div>";
+            }
+        } else {
+            echo "<p style='margin-bottom: 20px'>Vous n'avez pas encore de réservation pour ce restaurant</p>";
+        }
+        ?>
+    </div>
+
+    <div class="container">
+        <h2 class="secondary">Mariachi Grill</h2>
+        <!--        boucle où on a toutes les commandes du client-->
+        <?php
+        $reservations = $bdd->prepare("SELECT * FROM réservations WHERE id_restaurant=? and id_client=?");
+        $reservations->execute([4, $idClient]);
+
+        if ($reservations->rowCount() > 0) {
+            while ($row = $reservations->fetch(PDO::FETCH_ASSOC)) {
+                echo '<div class="box">';
+                $dateObj = new DateTime($row['jour']);
+                $date = $dateObj->format("l j F Y");
+                echo "<h3>Ma réservation du ".$date."</h3>";
+                $heureObj = new DateTime($row['heure']);
+                $hour = $heureObj->format('H:i');
+                echo "<p>Pour ".$row['nbr_personnes']." personnes à ".$hour."h</p></div>";
+            }
+        } else {
+            echo "<p style='margin-bottom: 20px'>Vous n'avez pas encore de réservation pour ce restaurant</p>";
+        }
+        ?>
+    </div>
+
+    <div class="container">
+        <h2 class="secondary">La Folie des Papilles</h2>
+        <!--        boucle où on a toutes les commandes du client-->
+        <?php
+        $reservations = $bdd->prepare("SELECT * FROM réservations WHERE id_restaurant=? and id_client=?");
+        $reservations->execute([2, $idClient]);
+
+        if ($reservations->rowCount() > 0) {
+            while ($row = $reservations->fetch(PDO::FETCH_ASSOC)) {
+                echo '<div class="box">';
+                $dateObj = new DateTime($row['jour']);
+                $date = $dateObj->format("l j F Y");
+                echo "<h3>Ma réservation du ".$date."</h3>";
+                $heureObj = new DateTime($row['heure']);
+                $hour = $heureObj->format('H:i');
+                echo "<p>Pour ".$row['nbr_personnes']." personnes à ".$hour."h</p></div>";
+            }
+        } else {
+            echo "<p style='margin-bottom: 20px'>Vous n'avez pas encore de réservation pour ce restaurant</p>";
+        }
+        ?>
+    </div>
+
+    <div class="container"  style="margin-bottom: 50vh">
+        <h2 class="secondary">Le Rêve du Panda</h2>
+        <!--        boucle où on a toutes les commandes du client-->
+        <?php
+        $reservations = $bdd->prepare("SELECT * FROM réservations WHERE id_restaurant=? and id_client=?");
+        $reservations->execute([3, $idClient]);
+
+        if ($reservations->rowCount() > 0) {
+            while ($row = $reservations->fetch(PDO::FETCH_ASSOC)) {
+                echo '<div class="box">';
+                $dateObj = new DateTime($row['jour']);
+                $date = $dateObj->format("l j F Y");
+                echo "<h3>Ma réservation du ".$date."</h3>";
+                $heureObj = new DateTime($row['heure']);
+                $hour = $heureObj->format('H:i');
+                echo "<p>Pour ".$row['nbr_personnes']." personnes à ".$hour."h</p></div>";
+            }
+        } else {
+            echo "<p style='margin-bottom: 20px'>Vous n'avez pas encore de réservation pour ce restaurant</p>";
+        }
+        ?>
     </div>
 </div>
 <!-- End Account Details -->
