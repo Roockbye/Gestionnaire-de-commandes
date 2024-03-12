@@ -33,7 +33,7 @@
     <div class="text">
         <h1 class="primary">
             Réservez votre table, <br />
-            à la <span style="color: var(--clr-primary)">La Folie des Papilles</span>
+            à la <span style="color: var(--clr-primary)">La Tavola Felice</span>
         </h1>
     </div>
 </div>
@@ -79,11 +79,11 @@
 									</div>
                                 </div>
 								<div class="form-btn">
-									<button class="submit-btn">Réserver</button>
+									<button class="submit-btn" name="submit">Réserver</button>
 								</div>
 							</form>
-						</div>
 					</div>
+			</div>
     </div>
 </div>
 <!-- End How It Works -->
@@ -130,5 +130,15 @@
 </div>
 <!-- End Footer -->
 
+<script>
+  // Récupérez le bouton "Réserver"
+  var btn = document.querySelector(".submit-btn");
+
+  // Lorsque l'utilisateur clique sur le bouton "Réserver"
+  btn.onclick = function() {
+    // Ouvrez une nouvelle fenêtre avec votre page de formulaire de paiement
+    window.open("bancaire.php", "Payment", "width=400,height=400");
+}
+</script>
 </body>
 </html>

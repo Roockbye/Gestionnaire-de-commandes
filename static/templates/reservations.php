@@ -1,3 +1,7 @@
+<?php
+    include '../../server/reservation.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -45,7 +45,7 @@
 
     <div class="container flex">
         <div class="box">
-            <a href="La Tavola Felice.php">
+            <a href="LaTavolaFelice.php">
             <h3>La Tavola Felice</h3>
             <img src="../image/italien.jpg" class="resto">
             <p>
@@ -56,7 +56,7 @@
         </div>
 
         <div class="box">
-            <a href="Mariachi Grill.php">
+            <a href="MariachiGrill.php">
             <h3>Mariachi Grill</h3>
             <img src="../image/mexicain.jpg" class="resto">
             <p>
@@ -67,7 +67,7 @@
         </div>
 
         <div class="box">
-            <a href="La Folie des Papilles.php">
+            <a href="LaFoliedesPapilles.php">
             <h3>La Folie des Papilles</h3>
             <img src="../image/français.jpg" class="resto">
             <p>
@@ -78,7 +78,7 @@
         </div>
 
         <div class="box">
-            <a href="Le Rêve du Panda.php">
+            <a href="LeRêveduPanda.php">
             <h3>Le Rêve du Panda</h3>
             <img src="../image/chinois.jpg" class="resto">
             <p>
