@@ -158,6 +158,7 @@ nav ul li img:hover {
 #how-it-works {
     width: 80%;
     margin: 0 auto;
+    margin-bottom: 25vh;
     text-align: center;
 }
 
@@ -456,6 +457,7 @@ nav ul li img:hover {
 	box-shadow: none;
 	color: #3e485c;
 	font-size: 14px;
+    padding: 0 7px;
 }
 
 .booking-form .form-control::-webkit-input-placeholder {

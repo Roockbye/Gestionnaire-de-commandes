@@ -53,19 +53,39 @@
             <div style="margin-top: 25px">
                     <div class="info">
                 <label>Nom</label></br>
-                <input type="text" name="nom" value="<?php echo isset($lastName) ? $lastName : '';?>"></br>
+                <input type="text" name="nom" value="<?php echo !empty($lastName)? $lastName : '';?>"></br>
+                        <?php
+                        if (isset($_POST['updateClient']) && empty($lastName)) {
+                            echo "<h10>Veuillez rentrer votre nom</h10>";
+                        }
+                        ?>
                     </div>
                     <div class="info">
                     <label>Prénom</label></br>
-                <input type="text" name="prenom" value="<?php echo isset($firstName) ? $firstName : '';?>"></br>
+                <input type="text" name="prenom" value="<?php echo !empty($firstName) ? $firstName : '';?>"></br>
+                        <?php
+                        if (isset($_POST['updateClient']) && empty($firstName)) {
+                            echo "<h10>Veuillez rentrer votre prénom</h10>";
+                        }
+                        ?>
                     </div>
                     <div class="info">
                 <label>Email</label></br>
-                <input type="email" name="email" value="<?php echo isset($email) ? $email : '';?>"></br>
+                <input type="email" name="email" value="<?php echo !empty($email) ? $email : '';?>"></br>
+                        <?php
+                        if (isset($_POST['updateClient']) && empty($email)) {
+                            echo "<h10>Veuillez rentrer votre mail</h10>";
+                        }
+                        ?>
                     </div>
                     <div class="info">
-                <label>Numéro de tel</label></br>
-                <input type="tel" name="tel" value="<?php echo isset($tel) ? $tel : '';?>"></br>
+                <label>Numéro de téléphone</label></br>
+                <input type="tel" name="tel" value="<?php echo !empty($tel) ? $tel : '';?>"></br>
+                        <?php
+                        if (isset($_POST['updateClient']) && empty($tel)) {
+                            echo "<h10>Veuillez rentrer votre numéro de téléphone</h10>";
+                        }
+                        ?>
                     </div>
             </div>
             <input type="submit" name="updateClient" value="Enregistrer">
@@ -87,6 +107,7 @@
                 <label>Confirmation du mot de passe</label>
                 <input type="password" name="checkPassword"></br>
             </div>
+                <p style="margin-top: 10px"><?php echo isset($isUpdate) ? $isUpdate : '';?></p>
             </div>
             <input type="submit" name="updatePassword" value="Enregistrer">
         </form>
@@ -108,7 +129,7 @@
         </div>
 
         <div class="footer-category">
-            <h2>Our Menu</h2>
+            <h2>What you can discover</h2>
 
             <ul>
                 <li>Biryani</li>

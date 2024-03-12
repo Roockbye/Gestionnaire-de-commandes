@@ -105,7 +105,7 @@
         </div>
 
         <div class="footer-category">
-            <h2>Our Menu</h2>
+            <h2>What you can discover</h2>
 
             <ul>
                 <li>Biryani</li>
