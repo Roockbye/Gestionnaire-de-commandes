@@ -33,7 +33,7 @@
     <div class="text">
         <h1 class="primary">
             Réservez votre table, <br />
-            à la <span style="color: var(--clr-primary)">La Tavola Felice</span>
+            à la <span style="color: var(--clr-primary)">Mariachi Grill</span>
         </h1>
     </div>
 </div>
@@ -47,36 +47,36 @@
             <div class="col-md-4 col-md-pull-7">
 						<div class="booking-form">
 							<form>
-								<div class="form-group">
-									<span class="form-label" name="nom">Nom</span>
-									<input class="form-control" type="text" placeholder="Nom">
-								</div>
                                 <div class="form-group">
-									<span class="form-label" name="nom">Prénom</span>
-									<input class="form-control" type="text" placeholder="Prénom">
-								</div>
-								<div class="row">
-									<div class="col-sm-6">
-										<div class="form-group">
-											<span class="form-label">Date de réservation</span>
-											<input class="form-control" type="date" required>
-										</div>
-									</div>
-									<div class="col-sm-6">
-										<div class="form-group">
-											<span class="form-label">Heure de réservation</span>
-											<input class="form-control" type="time" required>
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-sm-4">
-										<div class="form-group">
-											<span class="form-label">Nombre de personnes</span>
-											<input class="" type="number" min="1" max="20">
-											<span class="select-arrow"></span>
-										</div>
-									</div>
+                                    <span class="form-label" >Nom</span>
+                                    <input class="form-control" type="text" name="nom" value="<?php echo !empty($lastName)? $lastName : '';?>">
+                                </div>
+                                <div class="form-group">
+                                    <span class="form-label" >Prénom</span>
+                                    <input class="form-control" name="prenom" type="text" value="<?php echo !empty($firstName) ? $firstName : '';?>">
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <span class="form-label">Date de réservation</span>
+                                            <input class="form-control" name="jour" type="date" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <span class="form-label">Heure de réservation</span>
+                                            <input class="form-control" name="heure" type="time" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <span class="form-label">Nombre de personnes</span>
+                                            <input name="nbrPersonnes" type="number" min="1" max="20">
+                                            <span class="select-arrow"></span>
+                                        </div>
+                                    </div>
                                 </div>
 								<div class="form-btn">
 									<button class="submit-btn">Réserver</button>
