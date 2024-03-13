@@ -133,22 +133,23 @@
 <!-- End Footer -->
 
 <script>
-var inputHeure = document.getElementById('heure');
-    inputHeure.addEventListener('input', function() {
-        var heure = inputHeure.value;
-        var heuresAutorisees = ['11', '12', '13', '14', '18', '19', '20', '21'];
-        var heureValide = false;
-        
-        // Vérifier si l'heure sélectionnée est valide
-        if (heuresAutorisees.includes(heure.substr(0, 2))) {
-            heureValide = true;
-        }
-        
-        // Afficher un message d'erreur si l'heure n'est pas valide
-        if (!heureValide) {
-            alert('Veuillez choisir une heure valide (entre 11h et 15h, et entre 18h et 21h)');
-            inputHeure.value = '';
-        }
+var inputHeure = document.querySelector('input[name="heure"]');
+
+inputHeure.addEventListener('input', function() {
+    var heures = inputHeure.value.split(':')[0]; // Séparer les heures et les minutes
+    var heuresAutorisees = ['11', '12', '13', '14', '18', '19', '20', '21'];
+    var heureValide = false;
+    
+    // Vérifier si l'heure sélectionnée est valide
+    if (heuresAutorisees.includes(heures)) {
+        heureValide = true;
+    }
+    
+    // Afficher un message d'erreur si l'heure n'est pas valide
+    if (!heureValide) {
+        alert('Veuillez choisir une heure valide (entre 11h et 15h, et entre 18h et 21h)');
+        inputHeure.value = '';
+    }
 });
   // Récupérez le bouton "Réserver"
   var btn = document.querySelector(".submit-btn");
