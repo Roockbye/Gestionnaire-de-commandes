@@ -133,7 +133,7 @@
 <!-- End Footer -->
 
 <script>
-var inputHeure = document.getElementById('heure-reservation');
+var inputHeure = document.getElementById('heure');
     inputHeure.addEventListener('input', function() {
         var heure = inputHeure.value;
         var heuresAutorisees = ['11', '12', '13', '14', '18', '19', '20', '21'];
