@@ -65,10 +65,28 @@
                 $heureObj = new DateTime($row['heure']);
                 $hour = $heureObj->format('H:i');
                 echo "<p>Pour ".$row['nbr_personnes']." personnes à ".$hour."h</p></div>";
+
+                $commentaires = $bdd->prepare("SELECT description FROM commentaires WHERE id_réservation = ?");
+                $commentaires->execute([$row['id']]);
+
+                if ($commentaires->rowCount() > 0) {
+                    echo "<div class='commentaires'>";
+                    echo "<h4>Commentaires :</h4>";
+                    while ($commentaire = $commentaires->fetch(PDO::FETCH_ASSOC)) {
+                        echo "<p>".$commentaire['description']."</p>";
+                    }
+                    echo "</div>";
+                } else {
+                    echo "<p>Aucun commentaire pour cette réservation.</p>";
+                }
+                // Ajout de l'icône de commentaire ici
+                echo "<button class='comment-icon' onclick='openCommentPopup()'>Commentaire</button>";
+                echo "</div>";
             }
         } else {
             echo "<p style='margin-bottom: 20px'>Vous n'avez pas encore de réservation pour ce restaurant</p>";
         }
+
         ?>
     </div>
 
@@ -88,6 +106,24 @@
                 $heureObj = new DateTime($row['heure']);
                 $hour = $heureObj->format('H:i');
                 echo "<p>Pour ".$row['nbr_personnes']." personnes à ".$hour."h</p></div>";
+
+                $commentaires = $bdd->prepare("SELECT description FROM commentaires WHERE id_réservation = ?");
+                $commentaires->execute([$row['id']]);
+
+                if ($commentaires->rowCount() > 0) {
+                    echo "<div class='commentaires'>";
+                    echo "<h4>Commentaires :</h4>";
+                    while ($commentaire = $commentaires->fetch(PDO::FETCH_ASSOC)) {
+                        echo "<p>".$commentaire['description']."</p>";
+                    }
+                    echo "</div>";
+                } else {
+                    echo "<p>Aucun commentaire pour cette réservation.</p>";
+                }
+
+                // Ajout de l'icône de commentaire ici
+                echo "<button class='comment-icon' onclick='openCommentPopup()'>Commentaire</button>";
+                echo "</div>";
             }
         } else {
             echo "<p style='margin-bottom: 20px'>Vous n'avez pas encore de réservation pour ce restaurant</p>";
@@ -111,6 +147,24 @@
                 $heureObj = new DateTime($row['heure']);
                 $hour = $heureObj->format('H:i');
                 echo "<p>Pour ".$row['nbr_personnes']." personnes à ".$hour."h</p></div>";
+
+                $commentaires = $bdd->prepare("SELECT description FROM commentaires WHERE id_réservation = ?");
+                $commentaires->execute([$row['id']]);
+
+                if ($commentaires->rowCount() > 0) {
+                    echo "<div class='commentaires'>";
+                    echo "<h4>Commentaires :</h4>";
+                    while ($commentaire = $commentaires->fetch(PDO::FETCH_ASSOC)) {
+                        echo "<p>".$commentaire['description']."</p>";
+                    }
+                    echo "</div>";
+                } else {
+                    echo "<p>Aucun commentaire pour cette réservation.</p>";
+                }
+
+                // Ajout de l'icône de commentaire ici
+                echo "<button class='comment-icon' onclick='openCommentPopup()'>Commentaire</button>";
+                echo "</div>";
             }
         } else {
             echo "<p style='margin-bottom: 20px'>Vous n'avez pas encore de réservation pour ce restaurant</p>";
@@ -134,6 +188,24 @@
                 $heureObj = new DateTime($row['heure']);
                 $hour = $heureObj->format('H:i');
                 echo "<p>Pour ".$row['nbr_personnes']." personnes à ".$hour."h</p></div>";
+
+                $commentaires = $bdd->prepare("SELECT description FROM commentaires WHERE id_réservation = ?");
+                $commentaires->execute([$row['id']]);
+
+                if ($commentaires->rowCount() > 0) {
+                    echo "<div class='commentaires'>";
+                    echo "<h4>Commentaires :</h4>";
+                    while ($commentaire = $commentaires->fetch(PDO::FETCH_ASSOC)) {
+                        echo "<p>".$commentaire['description']."</p>";
+                    }
+                    echo "</div>";
+                } else {
+                    echo "<p>Aucun commentaire pour cette réservation.</p>";
+                }
+                
+                // Ajout de l'icône de commentaire ici
+                echo "<button class='comment-icon' onclick='openCommentPopup()'>Commentaire</button>";
+                echo "</div>";
             }
         } else {
             echo "<p style='margin-bottom: 20px'>Vous n'avez pas encore de réservation pour ce restaurant</p>";
@@ -185,6 +257,11 @@
     </div>
 </div>
 <!-- End Footer -->
-
+<script>
+  function openCommentPopup() {
+    // Ouvrir une nouvelle fenêtre pour le formulaire de commentaire
+    window.open("commentaire.php", "Commentaire", "width=400,height=400");
+  }
+</script>
 </body>
 </html>
