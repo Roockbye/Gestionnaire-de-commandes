@@ -49,7 +49,6 @@
         <!--        boucle où on a toutes les commandes du client-->
         <?php
         $bdd = new PDO('mysql:host=localhost;dbname=restôt;charset=utf8;','root',"");
-        session_start();
         $client = $bdd->prepare("SELECT id FROM clients WHERE mail=? AND mdp=?");
         $client->execute([$_SESSION['mail'], $_SESSION['mdp']]);
         $idClient = $client->fetchColumn();

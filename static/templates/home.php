@@ -28,8 +28,8 @@
 </header>
 <!-- End header -->
 
-<!-- Hero Section -->
-<div class="section flex" id="hero-section">
+<!-- Phrase Section -->
+<div class="section flex" id="phrase-section">
     <div class="text">
         <h1 class="primary">
             It's Not Just Food, <br />
@@ -37,10 +37,10 @@
         </h1>
     </div>
 </div>
-<!-- End Hero Section -->
+<!-- End Phrase Section -->
 
-<!-- How It Works -->
-<div class="section" id="how-it-works">
+<!-- Reservation section -->
+<div class="section" id="reservation-section">
     <h2 class="secondary">Nos Restaurants</h2>
 
     <div class="container flex">

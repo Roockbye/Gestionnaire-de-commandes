@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accueil</title>
     <!-- CSS -->
+    <link rel="stylesheet" href="../css/home.css" />
     <link rel="stylesheet" href="../css/resto.css" />
 </head>
 <body>
@@ -19,7 +20,7 @@
     <nav>
         <label class="logo">Restôt</label>
         <ul>
-            <li><a href="home.php" class="active">Accueil</a></li>
+            <li><a href="home.php">Accueil</a></li>
             <li><a href="reservations.php">Mes réservations</a></li>
             <li><a href="compte.php">Compte</a></li>
             <a href="../../server/deconnexion.php"><li><img src="../image/se-deconnecter.png" class="deconnexion"></li></a>
@@ -28,8 +29,8 @@
 </header>
 <!-- End header -->
 
-<!-- Hero Section -->
-<div class="section flex" id="hero-section">
+<!-- Phrase section -->
+<div class="section flex" id="phrase-section">
     <div class="text">
         <h1 class="primary">
             Réservez votre table, <br />
@@ -37,10 +38,10 @@
         </h1>
     </div>
 </div>
-<!-- End Hero Section -->
+<!-- End Phrase section -->
 
-<!-- How It Works -->
-<div class="section" id="how-it-works">
+<!-- Réservation -->
+<div class="section" id="reservation-section">
     <h2 class="secondary">Réservez ici</h2>
 
     <div class="container flex">
@@ -87,7 +88,7 @@
 					</div>
     </div>
 </div>
-<!-- End How It Works -->
+<!-- End Réservation -->
 
 <!-- Footer -->
 <div class="footer">
@@ -130,6 +131,7 @@
     </div>
 </div>
 <!-- End Footer -->
+
 <script>
   // Récupérez le bouton "Réserver"
   var btn = document.querySelector(".submit-btn");
