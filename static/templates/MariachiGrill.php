@@ -65,7 +65,7 @@
 									<div class="col-sm-6">
 										<div class="form-group">
 											<span class="form-label">Heure de réservation</span>
-											<input class="form-control" type="time" required>
+											<input class="form-control" type="time" id="heure-reservation" required>
 										</div>
 									</div>
 								</div>
@@ -130,6 +130,23 @@
 </div>
 <!-- End Footer -->
 <script>
+var inputHeure = document.getElementById('heure-reservation');
+    inputHeure.addEventListener('input', function() {
+        var heure = inputHeure.value;
+        var heuresAutorisees = ['11', '12', '13', '14', '18', '19', '20', '21'];
+        var heureValide = false;
+        
+        // Vérifier si l'heure sélectionnée est valide
+        if (heuresAutorisees.includes(heure.substr(0, 2))) {
+            heureValide = true;
+        }
+        
+        // Afficher un message d'erreur si l'heure n'est pas valide
+        if (!heureValide) {
+            alert('Veuillez choisir une heure valide (entre 11h et 15h, et entre 18h et 21h)');
+            inputHeure.value = '';
+        }
+});
   // Récupérez le bouton "Réserver"
   var btn = document.querySelector(".submit-btn");
 

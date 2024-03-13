@@ -49,31 +49,31 @@
 							<form>
 								<div class="form-group">
 									<span class="form-label" name="nom">Nom</span>
-									<input class="form-control" type="text" placeholder="Nom">
+									<input class="form-control" name="nom" type="text" placeholder="Nom">
 								</div>
                                 <div class="form-group">
-									<span class="form-label" name="nom">Prénom</span>
-									<input class="form-control" type="text" placeholder="Prénom">
+									<span class="form-label" name="prenom">Prénom</span>
+									<input class="form-control" name="prenom" type="text" placeholder="Prénom">
 								</div>
 								<div class="row">
 									<div class="col-sm-6">
 										<div class="form-group">
-											<span class="form-label">Date de réservation</span>
-											<input class="form-control" type="date" required>
+											<span class="form-label" name="dateReservation">Date de réservation</span>
+											<input class="form-control" name="dateReservation" type="date" required>
 										</div>
 									</div>
 									<div class="col-sm-6">
 										<div class="form-group">
-											<span class="form-label">Heure de réservation</span>
-											<input class="form-control" type="time" required>
+											<span class="form-label" name="heureReservation">Heure de réservation</span>
+											<input class="form-control" name="heureReservation" type="time" id="heure-reservation"required>
 										</div>
 									</div>
 								</div>
 								<div class="row">
 									<div class="col-sm-4">
 										<div class="form-group">
-											<span class="form-label">Nombre de personnes</span>
-											<input class="" type="number" min="1" max="20">
+											<span class="form-label" name="nbrPersonne">Nombre de personnes</span>
+											<input class="" name="nbrPersonne" type="number" min="1" max="20">
 											<span class="select-arrow"></span>
 										</div>
 									</div>
@@ -130,6 +130,23 @@
 </div>
 <!-- End Footer -->
 <script>
+var inputHeure = document.getElementById('heure-reservation');
+    inputHeure.addEventListener('input', function() {
+        var heure = inputHeure.value;
+        var heuresAutorisees = ['11', '12', '13', '14', '18', '19', '20', '21'];
+        var heureValide = false;
+        
+        // Vérifier si l'heure sélectionnée est valide
+        if (heuresAutorisees.includes(heure.substr(0, 2))) {
+            heureValide = true;
+        }
+        
+        // Afficher un message d'erreur si l'heure n'est pas valide
+        if (!heureValide) {
+            alert('Veuillez choisir une heure valide (entre 11h et 15h, et entre 18h et 21h)');
+            inputHeure.value = '';
+        }
+});
   // Récupérez le bouton "Réserver"
   var btn = document.querySelector(".submit-btn");
 
@@ -139,5 +156,6 @@
     window.open("bancaire.php", "Payment", "width=400,height=400");
 }
 </script>
+
 </body>
 </html>
