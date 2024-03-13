@@ -11,6 +11,7 @@
     <title>Mes réservations</title>
     <!-- CSS -->
     <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/reservation.css" />
 </head>
 <body>
 
@@ -28,6 +29,121 @@
 </header>
 <!-- End header -->
 
+<!-- Account Section -->
+<div class="section flex" id="account-section">
+    <div class="text">
+        <h1 class="primary">
+            Explore your reservations, <br />
+            Elevate your dining <span style="color: var(--clr-primary)">experience</span>
+        </h1>
+    </div>
+</div>
+<!-- End Account Section -->
+
+<!-- Account Details -->
+<div class="section" id="account-details">
+    <h2 class="secondary"><u>Mes réservations</u></h2>
+
+    <div class="container">
+        <h2 class="secondary">La Tavola Felice</h2>
+        <!--        boucle où on a toutes les commandes du client-->
+        <?php
+        $bdd = new PDO('mysql:host=localhost;dbname=restôt;charset=utf8;','root',"");
+        $client = $bdd->prepare("SELECT id FROM clients WHERE mail=? AND mdp=?");
+        $client->execute([$_SESSION['mail'], $_SESSION['mdp']]);
+        $idClient = $client->fetchColumn();
+
+        $reservations = $bdd->prepare("SELECT * FROM réservations WHERE id_restaurant=? and id_client=?");
+        $reservations->execute([1, $idClient]);
+
+        if ($reservations->rowCount() > 0) {
+            while ($row = $reservations->fetch(PDO::FETCH_ASSOC)) {
+                echo '<div class="box">';
+                $dateObj = new DateTime($row['jour']);
+                $date = $dateObj->format("l j F Y");
+                echo "<h3>Ma réservation du ".$date."</h3>";
+                $heureObj = new DateTime($row['heure']);
+                $hour = $heureObj->format('H:i');
+                echo "<p>Pour ".$row['nbr_personnes']." personnes à ".$hour."h</p></div>";
+            }
+        } else {
+            echo "<p style='margin-bottom: 20px'>Vous n'avez pas encore de réservation pour ce restaurant</p>";
+        }
+        ?>
+    </div>
+
+    <div class="container">
+        <h2 class="secondary">Mariachi Grill</h2>
+        <!--        boucle où on a toutes les commandes du client-->
+        <?php
+        $reservations = $bdd->prepare("SELECT * FROM réservations WHERE id_restaurant=? and id_client=?");
+        $reservations->execute([4, $idClient]);
+
+        if ($reservations->rowCount() > 0) {
+            while ($row = $reservations->fetch(PDO::FETCH_ASSOC)) {
+                echo '<div class="box">';
+                $dateObj = new DateTime($row['jour']);
+                $date = $dateObj->format("l j F Y");
+                echo "<h3>Ma réservation du ".$date."</h3>";
+                $heureObj = new DateTime($row['heure']);
+                $hour = $heureObj->format('H:i');
+                echo "<p>Pour ".$row['nbr_personnes']." personnes à ".$hour."h</p></div>";
+            }
+        } else {
+            echo "<p style='margin-bottom: 20px'>Vous n'avez pas encore de réservation pour ce restaurant</p>";
+        }
+        ?>
+    </div>
+
+    <div class="container">
+        <h2 class="secondary">La Folie des Papilles</h2>
+        <!--        boucle où on a toutes les commandes du client-->
+        <?php
+        $reservations = $bdd->prepare("SELECT * FROM réservations WHERE id_restaurant=? and id_client=?");
+        $reservations->execute([2, $idClient]);
+
+        if ($reservations->rowCount() > 0) {
+            while ($row = $reservations->fetch(PDO::FETCH_ASSOC)) {
+                echo '<div class="box">';
+                $dateObj = new DateTime($row['jour']);
+                $date = $dateObj->format("l j F Y");
+                echo "<h3>Ma réservation du ".$date."</h3>";
+                $heureObj = new DateTime($row['heure']);
+                $hour = $heureObj->format('H:i');
+                echo "<p>Pour ".$row['nbr_personnes']." personnes à ".$hour."h</p></div>";
+            }
+        } else {
+            echo "<p style='margin-bottom: 20px'>Vous n'avez pas encore de réservation pour ce restaurant</p>";
+        }
+        ?>
+    </div>
+
+    <div class="container"  style="margin-bottom: 50vh">
+        <h2 class="secondary">Le Rêve du Panda</h2>
+        <!--        boucle où on a toutes les commandes du client-->
+        <?php
+        $reservations = $bdd->prepare("SELECT * FROM réservations WHERE id_restaurant=? and id_client=?");
+        $reservations->execute([3, $idClient]);
+
+        if ($reservations->rowCount() > 0) {
+            while ($row = $reservations->fetch(PDO::FETCH_ASSOC)) {
+                echo '<div class="box">';
+                $dateObj = new DateTime($row['jour']);
+                $date = $dateObj->format("l j F Y");
+                echo "<h3>Ma réservation du ".$date."</h3>";
+                $heureObj = new DateTime($row['heure']);
+                $hour = $heureObj->format('H:i');
+                echo "<p>Pour ".$row['nbr_personnes']." personnes à ".$hour."h</p></div>";
+            }
+        } else {
+            echo "<p style='margin-bottom: 20px'>Vous n'avez pas encore de réservation pour ce restaurant</p>";
+        }
+        ?>
+    </div>
+</div>
+<!-- End Account Details -->
+
+
 <!-- Footer -->
 <div class="footer">
     <div class="container flex">
@@ -42,7 +158,7 @@
         </div>
 
         <div class="footer-category">
-            <h2>Our Menu</h2>
+            <h2>What you can discover</h2>
 
             <ul>
                 <li>Biryani</li>

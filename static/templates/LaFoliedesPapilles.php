@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accueil</title>
     <!-- CSS -->
+    <link rel="stylesheet" href="../css/home.css" />
     <link rel="stylesheet" href="../css/resto.css" />
 </head>
 <body>
@@ -19,7 +20,7 @@
     <nav>
         <label class="logo">Restôt</label>
         <ul>
-            <li><a href="home.php" class="active">Accueil</a></li>
+            <li><a href="home.php">Accueil</a></li>
             <li><a href="reservations.php">Mes réservations</a></li>
             <li><a href="compte.php">Compte</a></li>
             <a href="../../server/deconnexion.php"><li><img src="../image/se-deconnecter.png" class="deconnexion"></li></a>
@@ -28,8 +29,8 @@
 </header>
 <!-- End header -->
 
-<!-- Hero Section -->
-<div class="section flex" id="hero-section">
+<!-- Phrase section -->
+<div class="section flex" id="phrase-section">
     <div class="text">
         <h1 class="primary">
             Réservez votre table, <br />
@@ -37,56 +38,57 @@
         </h1>
     </div>
 </div>
-<!-- End Hero Section -->
+<!-- End Phrase section -->
 
-<!-- How It Works -->
-<div class="section" id="how-it-works">
+<!-- Réservation -->
+<div class="section" id="reservation-section">
     <h2 class="secondary">Réservez ici</h2>
 
     <div class="container flex">
             <div class="col-md-4 col-md-pull-7">
 						<div class="booking-form">
-							<form>
-								<div class="form-group">
-									<span class="form-label" name="nom">Nom</span>
-									<input class="form-control" name="nom" type="text" placeholder="Nom">
-								</div>
+							<form action="" method="post">
                                 <div class="form-group">
-									<span class="form-label" name="prenom">Prénom</span>
-									<input class="form-control" name="prenom" type="text" placeholder="Prénom">
-								</div>
-								<div class="row">
-									<div class="col-sm-6">
-										<div class="form-group">
-											<span class="form-label" name="dateReservation">Date de réservation</span>
-											<input class="form-control" name="dateReservation" type="date" required>
-										</div>
-									</div>
-									<div class="col-sm-6">
-										<div class="form-group">
-											<span class="form-label" name="heureReservation">Heure de réservation</span>
-											<input class="form-control" name="heureReservation" type="time" id="heure-reservation"required>
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-sm-4">
-										<div class="form-group">
-											<span class="form-label" name="nbrPersonne">Nombre de personnes</span>
-											<input class="" name="nbrPersonne" type="number" min="1" max="20">
-											<span class="select-arrow"></span>
-										</div>
-									</div>
+                                    <span class="form-label" >Nom</span>
+                                    <input class="form-control" type="text" name="nom" value="<?php echo !empty($lastName)? $lastName : '';?>">
+                                </div>
+                                <div class="form-group">
+                                    <span class="form-label" >Prénom</span>
+                                    <input class="form-control" name="prenom" type="text" value="<?php echo !empty($firstName) ? $firstName : '';?>">
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <span class="form-label">Date de réservation</span>
+                                            <input class="form-control" name="jour" type="date" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <span class="form-label">Heure de réservation</span>
+                                            <input class="form-control" name="heure" type="time" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <span class="form-label">Nombre de personnes</span>
+                                            <input name="nbrPersonnes" type="number" min="1" max="20">
+                                            <span class="select-arrow"></span>
+                                        </div>
+                                    </div>
                                 </div>
 								<div class="form-btn">
-									<button class="submit-btn" name="submit">Réserver</button>
+									<input class="submit-btn" name="reservationFoliePapilles" type="submit" value="Réserver">
 								</div>
-							</form>
+                                <p style="margin-top: 10px"><?php echo isset($isReserver) ? $isReserver : '';?></p>
+                            </form>
 						</div>
 					</div>
     </div>
 </div>
-<!-- End How It Works -->
+<!-- End Réservation -->
 
 <!-- Footer -->
 <div class="footer">
@@ -129,6 +131,7 @@
     </div>
 </div>
 <!-- End Footer -->
+
 <script>
 var inputHeure = document.getElementById('heure-reservation');
     inputHeure.addEventListener('input', function() {
