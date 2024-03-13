@@ -57,21 +57,9 @@ body {
     font-weight: 400;
     margin-bottom: 20px;
 }
-
-.btn {
-    padding: 14px 20px;
-    background: var(--clr-primary);
-    border-radius: 4px;
-    color: #fff;
-    text-decoration: none;
-    font-size: 22px;
-    display: inline-block;
-    margin: 20px 0;
-}
-
 /* End Base */
 
-/* Menu */
+/* Header */
 nav {
     height: 60px;
     width: 100%;
@@ -122,10 +110,10 @@ nav ul li img:hover {
     border-bottom: 2px solid var(--clr-primary);
     transition: 0.3s;
 }
-/* End Menu */
+/* End Header */
 
-/* Hero Section */
-#hero-section {
+/* Phrase Section */
+#phrase-section {
     background: var(--clr-tertiary);
     margin-top: 60px;
 }
@@ -145,11 +133,11 @@ nav ul li img:hover {
     display: block;
 }
 
-#hero-section .text {
+#phrase-section .text {
     margin-left: 30px;
 }
 
-#hero-section .visual img {
+#phrase-section .visual img {
     margin-left: auto;
 }
 
@@ -162,10 +150,10 @@ a:hover{
     color: var(--clr-primary);
     background: var(--clr-tertiary);
 }
-/* End Hero Section */
+/* End Phrase Section */
 
-/* How It Works */
-#how-it-works {
+/* Reservation section */
+#reservation-section {
     width: 80%;
     margin: 0 auto;
     text-align: center;
@@ -196,7 +184,7 @@ a:hover{
     border-radius: 8px;
     margin: 10px 0;
 }
-/* End How It Works */
+/* End Reservation section */
 
 /* Restaurant Menu */
 .category {
@@ -215,35 +203,6 @@ a:hover{
 
 .category li.active {
     color: var(--clr-primary);
-}
-
-.restaurant-menu {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.order {
-    justify-content: space-between;
-}
-
-.btn-menu {
-    padding: 6px 10px;
-    font-size: 16px;
-    text-align: center;
-    background: #fff;
-    border: 1px solid var(--clr-primary);
-    color: var(--clr-primary);
-}
-
-.title {
-    font-size: 18px;
-    font-weight: 300;
-    margin: 8px 0;
-}
-
-.location {
-    font-size: 18px;
-    font-weight: 500;
 }
 /* End Restaurant Menu */
 
@@ -332,11 +291,11 @@ a:hover{
         color: var(--clr-primary);
     }
 
-    #hero-section {
+    #phrase-section {
         margin-top: 80px;
     }
 
-    #hero-section .text {
+    #phrase-section .text {
         margin-left: auto;
     }
 
@@ -351,30 +310,12 @@ a:hover{
         text-align: center;
     }
 
-    .download,
-    .user {
-        flex-direction: row;
-    }
-
-    .user {
-        justify-content: center;
-    }
-
     .visual img {
         margin: 0 auto;
     }
 
     .box {
         margin: 15px 0;
-    }
-
-    .restaurant-menu {
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 20px;
-    }
-
-    .menu-item {
-        width: 80%;
     }
 
     .primary {
@@ -394,7 +335,6 @@ a:hover{
         text-align: center;
     }
 
-    .quick-links,
     .get-in-touch,
     .footer-category {
         display: none;
