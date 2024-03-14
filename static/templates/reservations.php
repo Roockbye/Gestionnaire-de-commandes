@@ -66,8 +66,8 @@
                 $hour = $heureObj->format('H:i');
                 echo "<p>Pour ".$row['nbr_personnes']." personnes à ".$hour."h</p>";
 
-                $commentaires = $bdd->prepare("SELECT description FROM commentaires WHERE id_réservation = ?");
-                $commentaires->execute([$row['id']]);
+                $commentaires = $bdd->prepare("SELECT description FROM commentaires WHERE id_réservation = ? AND id_restaurant = ?");
+                $commentaires->execute([$row['id'],1]);
 
                 if ($commentaires->rowCount() > 0) {
                     echo "<div class='commentaires'>";
@@ -107,8 +107,8 @@
                 $hour = $heureObj->format('H:i');
                 echo "<p>Pour ".$row['nbr_personnes']." personnes à ".$hour."h</p>";
 
-                $commentaires = $bdd->prepare("SELECT description FROM commentaires WHERE id_réservation = ?");
-                $commentaires->execute([$row['id']]);
+                $commentaires = $bdd->prepare("SELECT description FROM commentaires WHERE id_réservation = ? AND id_restaurant = ?");
+                $commentaires->execute([$row['id'],4]);
 
                 if ($commentaires->rowCount() > 0) {
                     echo "<div class='commentaires'>";
@@ -148,8 +148,8 @@
                 $hour = $heureObj->format('H:i');
                 echo "<p>Pour ".$row['nbr_personnes']." personnes à ".$hour."h</p>";
 
-                $commentaires = $bdd->prepare("SELECT description FROM commentaires WHERE id_réservation = ?");
-                $commentaires->execute([$row['id']]);
+                $commentaires = $bdd->prepare("SELECT description FROM commentaires WHERE id_réservation = ? AND id_restaurant = ?");
+                $commentaires->execute([$row['id'],2]);
 
                 if ($commentaires->rowCount() > 0) {
                     echo "<div class='commentaires'>";
@@ -189,8 +189,8 @@
                 $hour = $heureObj->format('H:i');
                 echo "<p>Pour ".$row['nbr_personnes']." personnes à ".$hour."h</p>";
 
-                $commentaires = $bdd->prepare("SELECT description FROM commentaires WHERE id_réservation = ?");
-                $commentaires->execute([$row['id']]);
+                $commentaires = $bdd->prepare("SELECT description FROM commentaires WHERE id_réservation = ? AND id_restaurant = ?");
+                $commentaires->execute([$row['id'],3]);
 
                 if ($commentaires->rowCount() > 0) {
                     echo "<div class='commentaires'>";

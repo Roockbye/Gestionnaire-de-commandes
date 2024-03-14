@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="../css/bancaire.css">
 </head>
 <body>
-
 <div class="container">
     <h2>Paiement</h2>
     <form method="post">
