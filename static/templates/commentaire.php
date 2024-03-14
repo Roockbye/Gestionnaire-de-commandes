@@ -10,7 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Commentaire</title>
     <link rel="stylesheet" href="../css/commentaire.css">
-
+</head>
+<body>
 <div class="popup">
     <h2>Donnez-nous votre avis !</h2>
     <form method="post">
@@ -20,7 +21,7 @@
         </div>
         <div class="form-group">
             <label for="mail">Mail :</label>
-            <input type="mail" id="mail" name="mail" value="<?php echo !empty($email)? $email : '';?>">
+            <input type="email" id="mail" name="mail" value="<?php echo !empty($email)? $email : '';?>">
         </div>
         <div class="form-group">
             <label for="message">Message :</label>
