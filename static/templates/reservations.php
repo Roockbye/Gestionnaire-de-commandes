@@ -67,21 +67,23 @@
                 $hour = $heureObj->format('H:i');
                 echo "<p>Pour ".$row['nbr_personnes']." personnes à ".$hour."h</p>";
 
-                $commentaires = $bdd->prepare("SELECT description FROM commentaires WHERE id_réservation = ? AND id_restaurant = ?");
+                $commentaires = $bdd->prepare("SELECT * FROM commentaires WHERE id_réservation = ? AND id_restaurant = ?");
                 $commentaires->execute([$row['id'],1]);
 
                 if ($commentaires->rowCount() > 0) {
                     echo "<div class='commentaires'>";
                     echo "<h4>Commentaires :</h4>";
                     while ($commentaire = $commentaires->fetch(PDO::FETCH_ASSOC)) {
-                        echo "<p>".$commentaire['description']."</p>";
+                        echo "<form action='' method='post'><input type='text' name='commentaire".$commentaire['id']."' value='".$commentaire['description']."'>";
                     }
-                    echo "</div>";
                 } else {
-                    echo "<p>Aucun commentaire pour cette réservation.</p>";
+                    echo "<form action='' method='post'><p>Aucun commentaire pour cette réservation.</p>";
                 }
+
                 // Ajout de l'icône de commentaire ici
-                echo "<button class='comment-icon' onclick='openCommentPopup()'>Commentaire</button>";
+                echo "<input type='hidden' name='idReservation' value='".$row['id']."'>";
+                echo '<input type="text" name="newCommentaire" placeholder="Commentaire">';
+                echo "<input class='comment-icon' type='submit' name='envoyer".$row['id']."' value='Envoyer'></form>";
                 echo "</div></div>";
             }
         } else {
@@ -108,22 +110,23 @@
                 $hour = $heureObj->format('H:i');
                 echo "<p>Pour ".$row['nbr_personnes']." personnes à ".$hour."h</p>";
 
-                $commentaires = $bdd->prepare("SELECT description FROM commentaires WHERE id_réservation = ? AND id_restaurant = ?");
+                $commentaires = $bdd->prepare("SELECT * FROM commentaires WHERE id_réservation = ? AND id_restaurant = ?");
                 $commentaires->execute([$row['id'],4]);
 
                 if ($commentaires->rowCount() > 0) {
                     echo "<div class='commentaires'>";
                     echo "<h4>Commentaires :</h4>";
                     while ($commentaire = $commentaires->fetch(PDO::FETCH_ASSOC)) {
-                        echo "<p>".$commentaire['description']."</p>";
+                        echo "<form action='' method='post'><input type='text' name='commentaire".$commentaire['id']."' value='".$commentaire['description']."'>";
                     }
-                    echo "</div>";
                 } else {
-                    echo "<p>Aucun commentaire pour cette réservation.</p>";
+                    echo "<form action='' method='post'><p>Aucun commentaire pour cette réservation.</p>";
                 }
 
                 // Ajout de l'icône de commentaire ici
-                echo "<button class='comment-icon' onclick='openCommentPopup()'>Commentaire</button>";
+                echo "<input type='hidden' name='idReservation' value='".$row['id']."'>";
+                echo '<input type="text" name="newCommentaire" placeholder="Commentaire">';
+                echo "<input class='comment-icon' type='submit' name='envoyer".$row['id']."' value='Envoyer'></form>";
                 echo "</div></div>";
             }
         } else {
@@ -149,22 +152,23 @@
                 $hour = $heureObj->format('H:i');
                 echo "<p>Pour ".$row['nbr_personnes']." personnes à ".$hour."h</p>";
 
-                $commentaires = $bdd->prepare("SELECT description FROM commentaires WHERE id_réservation = ? AND id_restaurant = ?");
+                $commentaires = $bdd->prepare("SELECT id FROM commentaires WHERE id_réservation = ? AND id_restaurant = ?");
                 $commentaires->execute([$row['id'],2]);
 
                 if ($commentaires->rowCount() > 0) {
                     echo "<div class='commentaires'>";
                     echo "<h4>Commentaires :</h4>";
                     while ($commentaire = $commentaires->fetch(PDO::FETCH_ASSOC)) {
-                        echo "<p>".$commentaire['description']."</p>";
+                        echo "<form action='' method='post'><input type='text' name='commentaire".$commentaire['id']."' value='".$commentaire['description']."'>";
                     }
-                    echo "</div>";
                 } else {
-                    echo "<p>Aucun commentaire pour cette réservation.</p>";
+                    echo "<form action='' method='post'><p>Aucun commentaire pour cette réservation.</p>";
                 }
 
                 // Ajout de l'icône de commentaire ici
-                echo "<button class='comment-icon' onclick='openCommentPopup()'>Commentaire</button>";
+                echo "<input type='hidden' name='idReservation' value='".$row['id']."'>";
+                echo '<input type="text" name="newCommentaire" placeholder="Commentaire">';
+                echo "<input class='comment-icon' type='submit' name='envoyer".$row['id']."' value='Envoyer'></form>";
                 echo "</div></div>";
             }
         } else {
@@ -197,16 +201,16 @@
                     echo "<div class='commentaires'>";
                     echo "<h4>Commentaires :</h4>";
                     while ($commentaire = $commentaires->fetch(PDO::FETCH_ASSOC)) {
-                        echo "<input type='text' name='commentaire".$commentaire['id']."' value='".$commentaire['description']."'>";
+                        echo "<form action='' method='post'><input type='text' name='commentaire".$commentaire['id']."' value='".$commentaire['description']."'>";
                     }
-                    echo "</div>";
                 } else {
-                    echo "<p>Aucun commentaire pour cette réservation.</p>";
+                    echo "<form action='' method='post'><p>Aucun commentaire pour cette réservation.</p>";
                 }
-                
+
                 // Ajout de l'icône de commentaire ici
+                echo "<input type='hidden' name='idReservation' value='".$row['id']."'>";
                 echo '<input type="text" name="newCommentaire" placeholder="Commentaire">';
-                echo "<input class='comment-icon' type='submit' name='envoyer".$row['id']."' value='Envoyer'>";
+                echo "<input class='comment-icon' type='submit' name='envoyer".$row['id']."' value='Envoyer'></form>";
                 echo "</div></div>";
             }
         } else {
