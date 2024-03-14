@@ -13,20 +13,21 @@ $idClient = $row['id'];
 }
 
 // Requête SQL pour récupérer la réservation du client
-$reservation = $bdd->prepare("SELECT * FROM réservations WHERE id_client=?");
+$reservation = $bdd->prepare("SELECT id FROM réservations WHERE id_client=?");
 $reservation->execute([$idClient]);
 
 while ($row = $reservation->fetch(PDO::FETCH_ASSOC)) {
-    $idReservation = $row['id'];
-    $idResto = $row['id_restaurant'];
-
-if(isset($_POST["envoyer".$idReservation])){
+if(isset($_POST['envoyer'.$row['id']])){
     // Récupération des valeurs du formulaire
     $description = $_POST['message'];
+    
+    $reservation = $bdd->prepare("SELECT id_restaurant FROM réservations WHERE id_client=?");
+    $reservation->execute([$idClient]);
+    $idResto = $reservation->fetchColumn();
 
     // Requête SQL pour insérer les données dans la table commentaires
     $insertion = $bdd->prepare("INSERT INTO commentaires (id_client, id_réservation, description, id_restaurant) VALUES (?, ?, ?, ?)");
-    $insertion->execute([$idClient, $idReservation, $description, $idResto]);
+    $insertion->execute([$idClient, $row['id'], $description, $idResto]);
 
     // Vérification de la réussite de l'insertion
     if($insertion){

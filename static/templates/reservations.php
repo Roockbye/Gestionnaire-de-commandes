@@ -1,5 +1,6 @@
 <?php
     include '../../server/reservation.php';
+    include '../../server/commentaire.php';
 ?>
 
 <!DOCTYPE html>
@@ -189,14 +190,14 @@
                 $hour = $heureObj->format('H:i');
                 echo "<p>Pour ".$row['nbr_personnes']." personnes à ".$hour."h</p>";
 
-                $commentaires = $bdd->prepare("SELECT description FROM commentaires WHERE id_réservation = ? AND id_restaurant = ?");
-                $commentaires->execute([$row['id'],3]);
+                $commentaires = $bdd->prepare("SELECT * FROM commentaires WHERE id_réservation = ? AND id_restaurant = ?");
+                $commentaires->execute([$row['id'], 3]);
 
                 if ($commentaires->rowCount() > 0) {
                     echo "<div class='commentaires'>";
                     echo "<h4>Commentaires :</h4>";
                     while ($commentaire = $commentaires->fetch(PDO::FETCH_ASSOC)) {
-                        echo "<p>".$commentaire['description']."</p>";
+                        echo "<input type='text' name='commentaire".$commentaire['id']."' value='".$commentaire['description']."'>";
                     }
                     echo "</div>";
                 } else {
@@ -204,7 +205,8 @@
                 }
                 
                 // Ajout de l'icône de commentaire ici
-                echo "<button class='comment-icon' onclick='openCommentPopup()'>Commentaire</button>";
+                echo '<input type="text" name="newCommentaire" placeholder="Commentaire">';
+                echo "<input class='comment-icon' type='submit' name='envoyer".$row['id']."' value='Envoyer'>";
                 echo "</div></div>";
             }
         } else {
@@ -257,11 +259,5 @@
     </div>
 </div>
 <!-- End Footer -->
-<script>
-  function openCommentPopup() {
-    // Ouvrir une nouvelle fenêtre pour le formulaire de commentaire
-    window.open("commentaire.php", "Commentaire", "width=400,height=400");
-  }
-</script>
 </body>
 </html>
