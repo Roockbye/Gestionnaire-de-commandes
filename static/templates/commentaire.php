@@ -1,6 +1,6 @@
 <?php
-    include '../../server/commentaire.php';
     include "../../server/compte.php";
+    include '../../server/commentaire.php';
 ?>
 
 <!DOCTYPE html>

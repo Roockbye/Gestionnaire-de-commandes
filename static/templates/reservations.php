@@ -64,7 +64,7 @@
                 echo "<h3>Ma réservation du ".$date."</h3>";
                 $heureObj = new DateTime($row['heure']);
                 $hour = $heureObj->format('H:i');
-                echo "<p>Pour ".$row['nbr_personnes']." personnes à ".$hour."h</p></div>";
+                echo "<p>Pour ".$row['nbr_personnes']." personnes à ".$hour."h</p>";
 
                 $commentaires = $bdd->prepare("SELECT description FROM commentaires WHERE id_réservation = ?");
                 $commentaires->execute([$row['id']]);
@@ -81,7 +81,7 @@
                 }
                 // Ajout de l'icône de commentaire ici
                 echo "<button class='comment-icon' onclick='openCommentPopup()'>Commentaire</button>";
-                echo "</div>";
+                echo "</div></div>";
             }
         } else {
             echo "<p style='margin-bottom: 20px'>Vous n'avez pas encore de réservation pour ce restaurant</p>";
@@ -105,7 +105,7 @@
                 echo "<h3>Ma réservation du ".$date."</h3>";
                 $heureObj = new DateTime($row['heure']);
                 $hour = $heureObj->format('H:i');
-                echo "<p>Pour ".$row['nbr_personnes']." personnes à ".$hour."h</p></div>";
+                echo "<p>Pour ".$row['nbr_personnes']." personnes à ".$hour."h</p>";
 
                 $commentaires = $bdd->prepare("SELECT description FROM commentaires WHERE id_réservation = ?");
                 $commentaires->execute([$row['id']]);
@@ -123,7 +123,7 @@
 
                 // Ajout de l'icône de commentaire ici
                 echo "<button class='comment-icon' onclick='openCommentPopup()'>Commentaire</button>";
-                echo "</div>";
+                echo "</div></div>";
             }
         } else {
             echo "<p style='margin-bottom: 20px'>Vous n'avez pas encore de réservation pour ce restaurant</p>";
@@ -146,7 +146,7 @@
                 echo "<h3>Ma réservation du ".$date."</h3>";
                 $heureObj = new DateTime($row['heure']);
                 $hour = $heureObj->format('H:i');
-                echo "<p>Pour ".$row['nbr_personnes']." personnes à ".$hour."h</p></div>";
+                echo "<p>Pour ".$row['nbr_personnes']." personnes à ".$hour."h</p>";
 
                 $commentaires = $bdd->prepare("SELECT description FROM commentaires WHERE id_réservation = ?");
                 $commentaires->execute([$row['id']]);
@@ -164,7 +164,7 @@
 
                 // Ajout de l'icône de commentaire ici
                 echo "<button class='comment-icon' onclick='openCommentPopup()'>Commentaire</button>";
-                echo "</div>";
+                echo "</div></div>";
             }
         } else {
             echo "<p style='margin-bottom: 20px'>Vous n'avez pas encore de réservation pour ce restaurant</p>";
@@ -187,7 +187,7 @@
                 echo "<h3>Ma réservation du ".$date."</h3>";
                 $heureObj = new DateTime($row['heure']);
                 $hour = $heureObj->format('H:i');
-                echo "<p>Pour ".$row['nbr_personnes']." personnes à ".$hour."h</p></div>";
+                echo "<p>Pour ".$row['nbr_personnes']." personnes à ".$hour."h</p>";
 
                 $commentaires = $bdd->prepare("SELECT description FROM commentaires WHERE id_réservation = ?");
                 $commentaires->execute([$row['id']]);
@@ -205,7 +205,7 @@
                 
                 // Ajout de l'icône de commentaire ici
                 echo "<button class='comment-icon' onclick='openCommentPopup()'>Commentaire</button>";
-                echo "</div>";
+                echo "</div></div>";
             }
         } else {
             echo "<p style='margin-bottom: 20px'>Vous n'avez pas encore de réservation pour ce restaurant</p>";

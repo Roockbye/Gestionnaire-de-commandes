@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 $bdd = new PDO('mysql:host=localhost;dbname=restôt;charset=utf8', 'root', '');
 
 // Requête SQL pour récupérer l'ID du client
@@ -20,8 +20,6 @@ $idReservation = '';
 
 while ($row = $reservation->fetch(PDO::FETCH_ASSOC)) {
 $idReservation = $row['id'];
-}
-
 
 if(isset($_POST['envoyer'])){
     // Récupération des valeurs du formulaire
@@ -38,4 +36,8 @@ if(isset($_POST['envoyer'])){
         echo "Erreur lors de l'insertion des données.";
     }
 }
+}
+
+
+
 ?>
