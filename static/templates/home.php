@@ -52,6 +52,7 @@
                 Vous êtes tenté par notre restaurant <strong>italien</strong>?
                 Cliquer ici pour commander !
             </p>
+            <p><strong>13 Rue du Bonheur, Ville Joyeuse, France</strong></p>
             </a>
         </div>
 
@@ -63,6 +64,7 @@
                 Vous êtes tenté par notre restaurant <strong>mexicain</strong>?
                 Cliquer ici pour commander !
             </p>
+            <p><strong>52 Rue de la Cuisine, Ville Savoureuse, France</strong></p>
             </a>
         </div>
 
@@ -74,6 +76,7 @@
                 Vous êtes tenté par notre restaurant <strong>français</strong>?
                 Cliquer ici pour commander !
             </p>
+            <p><strong>4 Avenue de la Gourmandise, Ville Délicieuse, France</strong></p>
         </a>
         </div>
 
@@ -85,6 +88,7 @@
                 Vous êtes tenté par notre restaurant <strong>chinois</strong>?
                 Cliquer ici pour commander !
             </p>
+            <p><strong>79 Boulevard de la Gastronomie, Ville Gourmande, France</strong></p>
         </a>
         </div>
     </div>
