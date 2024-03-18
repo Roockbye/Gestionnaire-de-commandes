@@ -22,6 +22,8 @@ while ($row = $client->fetch(PDO::FETCH_ASSOC)) {
     $idClient = $row['id'];
 }
 
+
+
 if (isset($_POST['reservationTavolaFelice'])) {
     addReservation($bdd,'LaTavolaFelice' , $idClient, $isReserver);
 }
@@ -55,8 +57,9 @@ function addReservation($bdd, $resto, $idClient, $isReserver)
     }
 
     if (check($bdd, $idResto, $nbrTotalTables, $day, $hour)) {
-        $reservation = $bdd->prepare("INSERT INTO réservations(jour, heure, nbr_personnes, id_client, id_restaurant) VALUES (?,?,?,?,?)");
-        $reservation->execute([$day, $hour, $nbrPersonne, $idClient, $idResto]);
+        $reservation = $bdd->prepare("INSERT INTO réservations(jour, heure, nbr_personnes, id_client, id_restaurant, heure_reservation) VALUES (?,?,?,?,?,?)");
+        $heure_reservation = date('Y-m-d H:i:s');
+        $reservation->execute([$day, $hour, $nbrPersonne, $idClient, $idResto, $heure_reservation]);
         $isReserver ='Votre réservation pour ' . $resto .  ' a bien été enregistré !';
     }
 }

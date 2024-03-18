@@ -64,7 +64,7 @@
                 echo "<h3>Ma réservation du ".$date."</h3>";
                 $heureObj = new DateTime($row['heure']);
                 $hour = $heureObj->format('H:i');
-                echo "<p>Pour ".$row['nbr_personnes']." personnes à ".$hour."h</p></div>";
+                echo "<p>Pour ".$row['nbr_personnes']." personnes à ".$hour."h. Réservé le ".$row['heure_reservation']."</p></div>";
 
                 $commentaires = $bdd->prepare("SELECT description FROM commentaires WHERE id_réservation = ?");
                 $commentaires->execute([$row['id']]);
@@ -105,7 +105,7 @@
                 echo "<h3>Ma réservation du ".$date."</h3>";
                 $heureObj = new DateTime($row['heure']);
                 $hour = $heureObj->format('H:i');
-                echo "<p>Pour ".$row['nbr_personnes']." personnes à ".$hour."h</p></div>";
+                echo "<p>Pour ".$row['nbr_personnes']." personnes à ".$hour."h. Réservé le ".$row['heure_reservation']."</p></div>";
 
                 $commentaires = $bdd->prepare("SELECT description FROM commentaires WHERE id_réservation = ?");
                 $commentaires->execute([$row['id']]);
@@ -146,7 +146,7 @@
                 echo "<h3>Ma réservation du ".$date."</h3>";
                 $heureObj = new DateTime($row['heure']);
                 $hour = $heureObj->format('H:i');
-                echo "<p>Pour ".$row['nbr_personnes']." personnes à ".$hour."h</p></div>";
+                echo "<p>Pour ".$row['nbr_personnes']." personnes à ".$hour."h. Réservé le ".$row['heure_reservation']."</p></div>";
 
                 $commentaires = $bdd->prepare("SELECT description FROM commentaires WHERE id_réservation = ?");
                 $commentaires->execute([$row['id']]);
@@ -187,7 +187,7 @@
                 echo "<h3>Ma réservation du ".$date."</h3>";
                 $heureObj = new DateTime($row['heure']);
                 $hour = $heureObj->format('H:i');
-                echo "<p>Pour ".$row['nbr_personnes']." personnes à ".$hour."h</p></div>";
+                echo "<p>Pour ".$row['nbr_personnes']." personnes à ".$hour."h. Réservé le ".$row['heure_reservation']."</p></div>";
 
                 $commentaires = $bdd->prepare("SELECT description FROM commentaires WHERE id_réservation = ?");
                 $commentaires->execute([$row['id']]);
