@@ -46,4 +46,9 @@ if (isset($_POST['updatePassword'])) {
     }
 }
 
+if (isset($_POST['deleteClient'])) {
+    $delete = $bdd->prepare("DELETE FROM clients WHERE id=?");
+    $delete->execute([$idClient]);
+    header("Location: inscription.php");
+}
 ?>
