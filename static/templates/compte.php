@@ -92,6 +92,7 @@
                 <!--option de déconnexion-->
         </form>
 
+        <div>
         <form action="" method="post" class="box">
             <h3>Mot de passe</h3>
             <p>
@@ -111,6 +112,10 @@
             </div>
             <input type="submit" name="updatePassword" value="Enregistrer">
         </form>
+        <form action="" method="post">
+            <input type="submit" name="deleteClient" value="Supprimer ce compte">
+        </form>
+        </div>
     </div>
 </div>
 <!-- End Account Details -->
