@@ -4,7 +4,11 @@
 <p id="description">Restôt simplifie votre expérience de réservation en ligne en vous permettant de réserver une table dans vos restaurants préférés en quelques clics. Explorez une variété de restaurants, choisissez votre créneau horaire préféré et réservez en toute simplicité. Profitez d'une expérience culinaire sans tracas avec Restôt !</p>
 
 <h2>🚀 Demo</h2>
-  
+
+![alt text](/static/image/resto.png)
+![alt text](/static/image/compte.png)
+![alt text](/static/image/paiement.png)
+
 <h2>🧐 Features</h2>
 
 Here're some of the project's best features:
@@ -21,9 +25,22 @@ Here're some of the project's best features:
 *   Visualiser toutes les réservation déjà existante
 *   Possibilité de mettre un commentaire à chaque réservation
 *   Supprimer un commentaire
+* Supprimer une réservation
 *   ...
 
 <h2>🛡️ Nos schémas:</h2>
+
+<p>MCD</p>
+
+![alt text](/static/image/mcd.drawio.png)
+
+<p> MLD </p>
+
+![alt text](/static/image/mld.drawio.png)
+
+<p> DRAWSQL</p>
+
+![alt text](/static/image/drawSQL.png)
 
 <h2>🛠️ Installation Steps:</h2>
 
@@ -49,5 +66,5 @@ Mélanie MARMANDE
 Technologies used in the project:
 
 *   PHP
-*   SQL
+*   MySQL
 *   phpmyadmin
