@@ -74,7 +74,8 @@
                     echo "<div class='commentaires'>";
                     echo "<h4>Commentaires :</h4>";
                     while ($commentaire = $commentaires->fetch(PDO::FETCH_ASSOC)) {
-                        echo "<form action='' method='post'><input type='text' name='commentaire".$commentaire['id']."' value='".$commentaire['description']."'></br>";
+                        echo "<form action='' method='post'><div><input type='text' name='commentaire".$commentaire['id']."' value='".$commentaire['description']."'>";
+                        echo "<input id='delete' type='submit' name='deleteCommentaire".$commentaire['id']."' value=''></div></br>";
                     }
                 } else {
                     echo "<div class='commentaires'>";
@@ -118,7 +119,8 @@
                     echo "<div class='commentaires'>";
                     echo "<h4>Commentaires :</h4>";
                     while ($commentaire = $commentaires->fetch(PDO::FETCH_ASSOC)) {
-                        echo "<form action='' method='post'><input type='text' name='commentaire".$commentaire['id']."' value='".$commentaire['description']."'></br>";
+                        echo "<form action='' method='post'><div><input type='text' name='commentaire".$commentaire['id']."' value='".$commentaire['description']."'>";
+                        echo "<input id='delete' type='submit' name='deleteCommentaire".$commentaire['id']."' value=''></div></br>";
                     }
                 } else {
                     echo "<div class='commentaires'>";
@@ -161,7 +163,8 @@
                     echo "<div class='commentaires'>";
                     echo "<h4>Commentaires :</h4>";
                     while ($commentaire = $commentaires->fetch(PDO::FETCH_ASSOC)) {
-                        echo "<form action='' method='post'><input type='text' name='commentaire".$commentaire['id']."' value='".$commentaire['description']."'></br>";
+                        echo "<form action='' method='post'><div><input type='text' name='commentaire".$commentaire['id']."' value='".$commentaire['description']."'>";
+                        echo "<input id='delete' type='submit' name='deleteCommentaire".$commentaire['id']."' value=''></div></br>";
                     }
                 } else {
                     echo "<div class='commentaires'>";
@@ -204,7 +207,8 @@
                     echo "<div class='commentaires'>";
                     echo "<h4>Commentaires :</h4>";
                     while ($commentaire = $commentaires->fetch(PDO::FETCH_ASSOC)) {
-                        echo "<form action='' method='post'><input type='text' name='commentaire".$commentaire['id']."' value='".$commentaire['description']."'></br>";
+                        echo "<form action='' method='post'><div><input type='text' name='commentaire".$commentaire['id']."' value='".$commentaire['description']."'>";
+                        echo "<input id='delete' type='submit' name='deleteCommentaire".$commentaire['id']."' value=''></div></br>";
                     }
                 } else {
                     echo "<div class='commentaires'>";

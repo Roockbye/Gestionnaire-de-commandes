@@ -39,3 +39,13 @@ while ($row = $reservations->fetch(PDO::FETCH_ASSOC)) {
         }
     }
 }
+
+$comments = $bdd->prepare("SELECT * FROM commentaires WHERE id_client=?");
+$comments->execute([$idClient]);
+
+while ($comment = $comments->fetch(PDO::FETCH_ASSOC)) {
+    if (isset($_POST['deleteCommentaire' . $comment['id']])) {
+        $delete = $bdd->prepare("DELETE FROM commentaires WHERE id=?");
+        $delete->execute([$comment['id']]);
+    }
+}
