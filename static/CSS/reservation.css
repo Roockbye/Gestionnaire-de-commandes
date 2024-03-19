@@ -9,8 +9,10 @@
 
 .box {
     margin-bottom: 10px;
-    text-align: left;
     width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .box:hover {
