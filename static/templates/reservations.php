@@ -159,7 +159,7 @@
                 echo "<p>Pour ".$row['nbr_personnes']." personnes à ".$hour."h. Réservé le ".substr($row['heure_reservation'], 0, -7)."</p></div>";
                 echo "<form action='' method='post'><input id='delete' type='submit' name='deleteReservation".$row['id']."' value=''></form></div>";
 
-                $commentaires = $bdd->prepare("SELECT id FROM commentaires WHERE id_réservation = ? AND id_restaurant = ?");
+                $commentaires = $bdd->prepare("SELECT * FROM commentaires WHERE id_réservation = ? AND id_restaurant = ?");
                 $commentaires->execute([$row['id'],2]);
 
                 if ($commentaires->rowCount() > 0) {
