@@ -74,17 +74,18 @@
                     echo "<div class='commentaires'>";
                     echo "<h4>Commentaires :</h4>";
                     while ($commentaire = $commentaires->fetch(PDO::FETCH_ASSOC)) {
-                        echo "<form action='' method='post'><input type='text' name='commentaire".$commentaire['id']."' value='".$commentaire['description']."'>";
+                        echo "<form action='' method='post'><input type='text' name='commentaire".$commentaire['id']."' value='".$commentaire['description']."'></br>";
                     }
                 } else {
+                    echo "<div class='commentaires'>";
                     echo "<form action='' method='post'><p>Aucun commentaire pour cette réservation.</p>";
                 }
 
                 // Ajout de l'icône de commentaire ici
                 echo "<input type='hidden' name='idReservation' value='".$row['id']."'>";
-                echo '<input type="text" name="newCommentaire" placeholder="Commentaire">';
+                echo '<input type="text" name="newCommentaire" placeholder="Commentaire"></br>';
                 echo "<input class='comment-icon' type='submit' name='envoyer".$row['id']."' value='Envoyer'></form>";
-                echo "</div></div>";
+                echo "</div>";
             }
         } else {
             echo "<p style='margin-bottom: 20px'>Vous n'avez pas encore de réservation pour ce restaurant</p>";
@@ -117,17 +118,18 @@
                     echo "<div class='commentaires'>";
                     echo "<h4>Commentaires :</h4>";
                     while ($commentaire = $commentaires->fetch(PDO::FETCH_ASSOC)) {
-                        echo "<form action='' method='post'><input type='text' name='commentaire".$commentaire['id']."' value='".$commentaire['description']."'>";
+                        echo "<form action='' method='post'><input type='text' name='commentaire".$commentaire['id']."' value='".$commentaire['description']."'></br>";
                     }
                 } else {
+                    echo "<div class='commentaires'>";
                     echo "<form action='' method='post'><p>Aucun commentaire pour cette réservation.</p>";
                 }
 
                 // Ajout de l'icône de commentaire ici
                 echo "<input type='hidden' name='idReservation' value='".$row['id']."'>";
-                echo '<input type="text" name="newCommentaire" placeholder="Commentaire">';
+                echo '<input type="text" name="newCommentaire" placeholder="Commentaire"></br>';
                 echo "<input class='comment-icon' type='submit' name='envoyer".$row['id']."' value='Envoyer'></form>";
-                echo "</div></div>";
+                echo "</div>";
             }
         } else {
             echo "<p style='margin-bottom: 20px'>Vous n'avez pas encore de réservation pour ce restaurant</p>";
@@ -159,17 +161,18 @@
                     echo "<div class='commentaires'>";
                     echo "<h4>Commentaires :</h4>";
                     while ($commentaire = $commentaires->fetch(PDO::FETCH_ASSOC)) {
-                        echo "<form action='' method='post'><input type='text' name='commentaire".$commentaire['id']."' value='".$commentaire['description']."'>";
+                        echo "<form action='' method='post'><input type='text' name='commentaire".$commentaire['id']."' value='".$commentaire['description']."'></br>";
                     }
                 } else {
+                    echo "<div class='commentaires'>";
                     echo "<form action='' method='post'><p>Aucun commentaire pour cette réservation.</p>";
                 }
 
                 // Ajout de l'icône de commentaire ici
                 echo "<input type='hidden' name='idReservation' value='".$row['id']."'>";
-                echo '<input type="text" name="newCommentaire" placeholder="Commentaire">';
+                echo '<input type="text" name="newCommentaire" placeholder="Commentaire"></br>';
                 echo "<input class='comment-icon' type='submit' name='envoyer".$row['id']."' value='Envoyer'></form>";
-                echo "</div></div>";
+                echo "</div>";
             }
         } else {
             echo "<p style='margin-bottom: 20px'>Vous n'avez pas encore de réservation pour ce restaurant</p>";
@@ -201,17 +204,18 @@
                     echo "<div class='commentaires'>";
                     echo "<h4>Commentaires :</h4>";
                     while ($commentaire = $commentaires->fetch(PDO::FETCH_ASSOC)) {
-                        echo "<form action='' method='post'><input type='text' name='commentaire".$commentaire['id']."' value='".$commentaire['description']."'>";
+                        echo "<form action='' method='post'><input type='text' name='commentaire".$commentaire['id']."' value='".$commentaire['description']."'></br>";
                     }
                 } else {
+                    echo "<div class='commentaires'>";
                     echo "<form action='' method='post'><p>Aucun commentaire pour cette réservation.</p>";
                 }
 
                 // Ajout de l'icône de commentaire ici
                 echo "<input type='hidden' name='idReservation' value='".$row['id']."'>";
-                echo '<input type="text" name="newCommentaire" placeholder="Commentaire">';
+                echo '<input type="text" name="newCommentaire" placeholder="Commentaire"></br>';
                 echo "<input class='comment-icon' type='submit' name='envoyer".$row['id']."' value='Envoyer'></form>";
-                echo "</div></div>";
+                echo "</div>";
             }
         } else {
             echo "<p style='margin-bottom: 20px'>Vous n'avez pas encore de réservation pour ce restaurant</p>";
