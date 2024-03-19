@@ -87,3 +87,15 @@ function check($bdd, $idResto, $nbrTables, $day, $hour)
         return false; // Plus de place ni pour le midi ni pour le soir
     }
 }
+
+
+//gestion des réservations sur la page Réservation
+$reserv = $bdd->prepare("SELECT * FROM réservations WHERE id_client=?");
+$reserv->execute([$idClient]);
+
+while ($reservation = $reserv->fetch(PDO::FETCH_ASSOC)) {
+    if (isset($_POST['deleteReservation'.$reservation['id']])) {
+        $delete = $bdd->prepare("DELETE FROM réservations WHERE id=?");
+        $delete->execute([$reservation['id']]);
+    }
+}

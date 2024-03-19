@@ -59,13 +59,14 @@
 
         if ($reservations->rowCount() > 0) {
             while ($row = $reservations->fetch(PDO::FETCH_ASSOC)) {
-                echo '<div class="box">';
+                echo '<div class="box"><div>';
                 $dateObj = new DateTime($row['jour']);
                 $date = $dateObj->format("l j F Y");
                 echo "<h3>Ma réservation du ".$date."</h3>";
                 $heureObj = new DateTime($row['heure']);
                 $hour = $heureObj->format('H:i');
                 echo "<p>Pour ".$row['nbr_personnes']." personnes à ".$hour."h. Réservé le ".substr($row['heure_reservation'], 0, -7)."</p></div>";
+                echo "<form action='' method='post'><input id='delete' type='submit' name='deleteReservation".$row['id']."' value=''></form></div>";
 
                 $commentaires = $bdd->prepare("SELECT * FROM commentaires WHERE id_réservation = ? AND id_restaurant = ?");
                 $commentaires->execute([$row['id'],1]);
@@ -104,13 +105,14 @@
 
         if ($reservations->rowCount() > 0) {
             while ($row = $reservations->fetch(PDO::FETCH_ASSOC)) {
-                echo '<div class="box">';
+                echo '<div class="box"><div>';
                 $dateObj = new DateTime($row['jour']);
                 $date = $dateObj->format("l j F Y");
                 echo "<h3>Ma réservation du ".$date."</h3>";
                 $heureObj = new DateTime($row['heure']);
                 $hour = $heureObj->format('H:i');
-                echo "<p>Pour ".$row['nbr_personnes']." personnes à ".$hour."h. Réservé le ".$row['heure_reservation']."</p></div>";
+                echo "<p>Pour ".$row['nbr_personnes']." personnes à ".$hour."h. Réservé le ".substr($row['heure_reservation'], 0, -7)."</p></div>";
+                echo "<form action='' method='post'><input id='delete' type='submit' name='deleteReservation".$row['id']."' value=''></form></div>";
 
                 $commentaires = $bdd->prepare("SELECT * FROM commentaires WHERE id_réservation = ? AND id_restaurant = ?");
                 $commentaires->execute([$row['id'],4]);
@@ -148,13 +150,14 @@
 
         if ($reservations->rowCount() > 0) {
             while ($row = $reservations->fetch(PDO::FETCH_ASSOC)) {
-                echo '<div class="box">';
+                echo '<div class="box"><div>';
                 $dateObj = new DateTime($row['jour']);
                 $date = $dateObj->format("l j F Y");
                 echo "<h3>Ma réservation du ".$date."</h3>";
                 $heureObj = new DateTime($row['heure']);
                 $hour = $heureObj->format('H:i');
-                echo "<p>Pour ".$row['nbr_personnes']." personnes à ".$hour."h. Réservé le ".$row['heure_reservation']."</p></div>";
+                echo "<p>Pour ".$row['nbr_personnes']." personnes à ".$hour."h. Réservé le ".substr($row['heure_reservation'], 0, -7)."</p></div>";
+                echo "<form action='' method='post'><input id='delete' type='submit' name='deleteReservation".$row['id']."' value=''></form></div>";
 
                 $commentaires = $bdd->prepare("SELECT id FROM commentaires WHERE id_réservation = ? AND id_restaurant = ?");
                 $commentaires->execute([$row['id'],2]);
@@ -192,13 +195,14 @@
 
         if ($reservations->rowCount() > 0) {
             while ($row = $reservations->fetch(PDO::FETCH_ASSOC)) {
-                echo '<div class="box">';
+                echo '<div class="box"><div>';
                 $dateObj = new DateTime($row['jour']);
                 $date = $dateObj->format("l j F Y");
                 echo "<h3>Ma réservation du ".$date."</h3>";
                 $heureObj = new DateTime($row['heure']);
                 $hour = $heureObj->format('H:i');
-                echo "<p>Pour ".$row['nbr_personnes']." personnes à ".$hour."h. Réservé le ".$row['heure_reservation']."</p></div>";
+                echo "<p>Pour ".$row['nbr_personnes']." personnes à ".$hour."h. Réservé le ".substr($row['heure_reservation'], 0, -7)."</p></div>";
+                echo "<form action='' method='post'><input id='delete' type='submit' name='deleteReservation".$row['id']."' value=''></form></div>";
 
                 $commentaires = $bdd->prepare("SELECT * FROM commentaires WHERE id_réservation = ? AND id_restaurant = ?");
                 $commentaires->execute([$row['id'], 3]);
